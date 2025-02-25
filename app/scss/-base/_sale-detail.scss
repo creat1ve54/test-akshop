@@ -1,0 +1,15 @@
+.sale-detail {
+  .sale-card {
+    &__time {
+      top: inherit;
+      bottom: 16px;
+    }
+  }
+
+  &__info {
+    padding: 12px;
+    font-size: 12px;
+    border-top: 1px solid rgba(#333333, 0.7);
+    border-bottom: 1px solid rgba(#333333, 0.7);
+  }
+}

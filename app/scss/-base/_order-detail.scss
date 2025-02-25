@@ -1,0 +1,30 @@
+.order-detail {
+  &__text {
+    font-family: $ffCirce, $ffDefault;
+    color: $gray1;
+    font-size: 16px;
+    font-weight: 700;
+
+    a {
+      text-decoration-line: underline;
+      text-underline-offset: 3px;
+      color: #65676e;
+      transition: all 0.3s ease-in-out;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: #7d9933;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+
+    .p {
+      display: inline-block;
+    }
+  }
+
+  .btn {
+    max-width: 325px;
+  }
+}

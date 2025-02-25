@@ -1,0 +1,98 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    a(href="##").breadcrumb__item Личный кабинет
+                    .breadcrumb__item Мои заказы
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                .page-title__case
+                    .page-title__container
+                        h1 Моя учётная запись
+        .container
+            .section
+                .section__left
+                    .link-section
+                        .link-section__list
+                            a(href="##").link-section__item.link-section__item--active Мой кабинет
+                            a(href="##").link-section__item Моя учетная запись
+                            a(href="##").link-section__item Мои финансы
+                            a(href="##").link-section__item Мои заказы
+                            //- a(href="##").link-section__item Мои отзывы
+                            //- a(href="##").link-section__item Мои подписки
+                .section__right
+                    .user-data
+                        .user-data__header
+                            .h2 Учётные данные
+                            svg
+                                use(xlink:href="/assets/icons/sprite.svg#edit")
+                        .user-data__container
+                        .field
+                            //- .field--error
+                            .custom-input
+                                .custom-input__container
+                                    input(type="text" required).custom-input__text
+                                    label.custom-input__placeholder Ваше имя
+                                    .custom-input__icons-container
+                                        //- .custom-input__clear
+                                        //- .loader-spinner.loader-spinner--input
+                                        //- .custom-input__img
+                                        //-     img(src="/assets/images/clear_input.svg" alt="Clear")
+                            .field__info Заполните, чтобы мы знали, как к вам обращаться
+                        .field
+                            //- .field--error
+                            .custom-input
+                                .custom-input__container
+                                    input(type="text" required).custom-input__text
+                                    label.custom-input__placeholder Ваша фамилия
+                                    .custom-input__icons-container
+                                        //- .custom-input__clear
+                                        //- .loader-spinner.loader-spinner--input
+                                        //- .custom-input__img
+                                        //-     img(src="/assets/images/clear_input.svg" alt="Clear")
+                        .field
+                            //- .field--error
+                            .custom-input.custom-input--disabled
+                                .custom-input__container
+                                    input(type="text" required disabled).custom-input__text
+                                    label.custom-input__placeholder Ваш номер телефона
+                                    button.custom-input__btn Изменить
+                                    //- .custom-input__icons-container Изменить
+                                    //- .custom-input__clear
+                                    //- .loader-spinner.loader-spinner--input
+                                    //- .custom-input__img
+                                    //-     img(src="/assets/images/clear_input.svg" alt="Clear")
+                            .field__info Для отправки уведомлений о статусе заказа. Используйте как логин для входа в личный кабинет
+                        .field
+                            //- .field--error
+                            .custom-input
+                                .custom-input__container
+                                    input(type="text" required).custom-input__text
+                                    label.custom-input__placeholder Ваш e-mail
+                                    .custom-input__icons-container
+                                        //- .custom-input__clear
+                                        //- .loader-spinner.loader-spinner--input
+                                        //- .custom-input__img
+                                        //-     img(src="/assets/images/clear_input.svg" alt="Clear")
+                            .field__info Необходим для уточнения деталей заказа
+                        .user-data__btns
+                            button(type="button").btn.btn--green.btn--green-white Сохранить изменения
+                            button(type="button").btn.btn--white Назад
+                        button(type="button").btn.btn--red.mb-8 Выйти из учетной записи
+                        button(type="button").btn.btn--red Удалить учетную запись
+        +footer

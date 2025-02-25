@@ -1,0 +1,130 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    a(href="##").breadcrumb__item Личный кабинет
+                    .breadcrumb__item Мои заказы
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                .page-title__case
+                    .page-title__container
+                        h1 Моя учётная запись
+        .container
+            .section
+                .section__left
+                    .link-section
+                        .link-section__list
+                            a(href="##").link-section__item.link-section__item--active Мой кабинет
+                            a(href="##").link-section__item Моя учетная запись
+                            a(href="##").link-section__item Мои финансы
+                            a(href="##").link-section__item Мои заказы
+                            //- a(href="##").link-section__item Мои отзывы
+                            //- a(href="##").link-section__item Мои подписки
+                .section__right
+                    .account
+                        .account__container
+                            .account__left
+                                .h2.mb-12 Здравствуйте, Иван Иванов
+                                div.mb-12
+                                    a(href="tel:+79655688585").account__link
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#phone")
+                                        |+7 (965) 568-85-85
+                                div.mb-20
+                                    a(href="mailto:post-meta@mail.ru").account__link
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#mail")
+                                        |post-meta@mail.ru
+                                a(href='##').account__title.h3.mb-12 
+                                    | Мои финансы
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                                .account__info
+                                    .account__info-card
+                                        .p-bold 
+                                            svg
+                                                use(xlink:href="/assets/icons/sprite.svg#coins")
+                                            |10 554 
+                                            span.p бонусов всего
+                                    .account__info-card.account__info-card--yellow
+                                        .p-bold 
+                                            svg
+                                                use(xlink:href="/assets/icons/sprite.svg#fair")
+                                            |10 554 
+                                            span.p сгорят 22 декабря 2023 года
+                                    .account__info-card
+                                        .p-bold 
+                                            svg
+                                                use(xlink:href="/assets/icons/sprite.svg#creditCard")
+                                            |VISA ···· 9999 
+                                            span.p выбранная приоритетная карта для оплаты заказов
+                            .account__right
+                                a(href='##').account__title.h3.mb-12 
+                                    |Мои заказы
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                                ul.account__orders
+                                    li.account__order
+                                        .account__order-images
+                                            .account__order-images-container
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .account__order-content
+                                            .account__order-texts
+                                                div
+                                                    .p-bold Заказ в работе 
+                                                    .p Доставка курьером 
+                                                | 1900 ₽, 4 товара, 3.2 кг 
+                                            .account__order-info
+                                                .order-status.order-status--waiting Ожидает обработки
+                                                .account__order-date.p 17 декабря 2023
+                                    li.account__order
+                                        .account__order-images
+                                            .account__order-images-container
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .account__order-content
+                                            .account__order-texts
+                                                div
+                                                    .p-bold Заказ в работе 
+                                                    .p Доставка курьером 
+                                                | 1900 ₽, 4 товара, 3.2 кг 
+                                            .account__order-info
+                                                .order-status.order-status--success Завершен
+                                                .account__order-date.p 17 декабря 2023
+                                    li.account__order
+                                        .account__order-images
+                                            .account__order-images-container
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .account__order-content
+                                            .account__order-texts
+                                                div
+                                                    .p-bold Заказ в работе 
+                                                    .p Доставка курьером 
+                                                | 1900 ₽, 4 товара, 3.2 кг 
+                                            .account__order-info
+                                                .order-status.order-status--error Отменен
+                                                .account__order-date.p 17 декабря 2023
+        +footer

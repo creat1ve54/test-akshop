@@ -1,0 +1,38 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/cardsSwiper.pug
+include layouts/components/interestingProduct.pug
+
+doctype html 
+html(lang='ru')
+    +m-head 
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    .breadcrumb__item Оформить заказ
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                .page-title__case
+                    h1 Заказ №32989435246
+                    .page-title__description от 15 декабря 2023 
+                //- .page-title__count 233 #[span товара]
+        .order-detail
+            .container
+                .h3.mb-20 Доставка
+                .order-detail__text.mb-16 По адресу: #[.p Краснодар, ул. Басеянная, д. 16, к. 2, 3 подъезд,15 эт., кв 178, домофон 178]
+                .order-detail__text.mb-16 Курьер доставит Ваш заказ с 16:00 до 17:00 / Ваш заказ будет ожидать в магазине с 16:00
+                .order-detail__text.mb-20 Заказ оформлен на номер +7 (908) 080 80 80
+                .btn.btn--green.btn--green-white.mb-32 Перейти к деталям
+        .cards-swiper
+            .container
+                .h2.cards-swiper__head Вам могут понравиться
+                +cardsSwiper
+        +footer

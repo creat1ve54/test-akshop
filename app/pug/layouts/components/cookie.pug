@@ -1,0 +1,11 @@
+mixin cookie
+    .cookie
+        button.cookie__close
+            svg
+                use(xlink:href="/assets/icons/sprite.svg#closeModal")
+        .cookie__info
+            svg
+                use(xlink:href="/assets/icons/sprite.svg#cookie")
+            span Продолжая использовать наш сайт, вы даете #[a(href='##') согласие на использование данных cookie], помогающих нам делать его удобнее для Вас!
+        button.cookie__btn.btn.btn--green
+            .btn__container Продолжить

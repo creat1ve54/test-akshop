@@ -1,0 +1,32 @@
+.catalog {
+  margin-bottom: 60px;
+
+  &__items {
+    margin-bottom: 32px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    &-btn {
+      height: 44px;
+      color: #333;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    margin-bottom: 24px;
+    &__items {
+      gap: 11px;
+      grid-template-columns: repeat(auto-fit, minmax(162px, 1fr));
+    }
+  }
+  @media screen and (max-width: $smallMobile) {
+    margin-bottom: 24px;
+    &__items {
+      gap: vw(10px, $smallMobile);
+      grid-template-columns: repeat(auto-fit, minmax(vw(162px, $smallMobile), 1fr));
+    }
+  }
+}

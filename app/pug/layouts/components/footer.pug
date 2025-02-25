@@ -1,0 +1,64 @@
+mixin footer 
+    .footer
+        .container 
+            .footer__up
+                .footer__container
+                    .footer__column.footer__column--one
+                        .footer__column-questions Есть вопросы? Мы рядом
+                        a(href='tel:+78002508925').footer__column-phone +7 800 250-8-925
+                        a(href='mailto:info@agrokomplexshop.ru').footer__column-mail info@agrokomplexshop.ru
+                        .timetable
+                            .timetable__text Пн-Пт, с 9:00 до 19:00
+                            .timetable__text Сб-Вс, с 10:00 до 16:00
+                    .footer__column.footer__column--two
+                        div
+                            .footer__column-links
+                                a(href="##").footer__column-link О компании
+                                a(href="##").footer__column-link Новости
+                                a(href="##").footer__column-link Доставка и оплата
+                                a(href="##").footer__column-link Контакты
+                            .social 
+                                a(href="##").social__item
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#telegram")
+                                a(href="##").social__item
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#whatsApp")
+                                a(href="##").social__item
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#vkontakte")
+                                a(href="##").social__item
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#youTube")
+                        .footer__column.footer__column--mobile
+                            .footer__column-application-text Скачайте наше #[br] приложение
+                            .footer__column-application-img.footer__column-application-img--appStore
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#appStore")
+                            .footer__column-application-img.footer__column-application-img--googlePlay
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#googlePlay")
+                .footer__container
+                    div.footer__case
+                        .footer__columns
+                            .footer__column.footer__column--desctop
+                                .footer__column-application-text Скачайте наше #[br] приложение
+                                .footer__column-application-img.footer__column-application-img--appStore
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#appStore")
+                                .footer__column-application-img.footer__column-application-img--googlePlay
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#googlePlay")
+                            .footer__column--four
+                                .footer__column-item Оферта
+                                .footer__column-item Персональные данные
+                                .footer__column-item Политика конфиденциальности
+                        .subscribe
+                            input(type="text" placeholder="Введите e-mail").subscribe__input
+                            button(type='button').subscribe__button.btn.btn--green Подписаться
+            .footer__down
+                .footer__down-left 2023 © АО фирма «Агрокомплекс» им. Н.И. Ткачёва | Краснодарский край, ст. Выселки, ул. Степная, 1 | ИНН 2328000083 | ОГРН 1022303554635
+                .footer__down-right 
+                    span Разработано в
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#asteq") 

@@ -1,0 +1,208 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/mainSliders.pug
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    .breadcrumb__item Каталог
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                .page-title__case
+                    .page-title__container
+                        h1 Каталог
+                    //-     .order-status.order-status--waiting Ожидает обработки
+                    //- .page-title__bottom.h5 от 15 декабря 2023 
+                    //- .page-title__count 233 #[span товара]
+        .container
+            ul.categorys.mb-40
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+                li
+                    a(href='##').category
+                        .category__title Молоко, сыры, яйцо
+                        .category__text 23 товара
+                        .category__img
+                            img(src="/assets/images/category-1.png" alt="Category")
+        .container
+            .main-slider.swiper
+                .swiper-wrapper
+                    .swiper-slide
+                        img(src="/assets/images/main-slider__bg.png" alt="BG").main-slider__bg
+                        img(src="/assets/images/main-slider__bg-table.png" alt="BG").main-slider__bg.main-slider__bg--table
+                        .main-slider__info
+                            .main-slider__title НИКОЛАЕВСКИЕ СЫРОВАРНИ
+                            .main-slider__text Выдержаные сыры с ярким характером
+                            a(href="##").main-slider__btn.btn.btn--white
+                                .btn__container
+                                    span Подробнее
+                                    span.main-slider__btn-arrow.btn__arrow
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                    .swiper-slide
+                        img(src="/assets/images/main-slider__bg.png" alt="BG").main-slider__bg
+                        img(src="/assets/images/main-slider__bg-table.png" alt="BG").main-slider__bg.main-slider__bg--table
+                        .main-slider__info
+                            .main-slider__title НИКОЛАЕВСКИЕ СЫРОВАРНИ
+                            .main-slider__text Выдержаные сыры с ярким характером
+                            a(href="##").main-slider__btn.btn.btn--white
+                                .btn__container
+                                    span Подробнее
+                                    span.main-slider__btn-arrow.btn__arrow
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                    .swiper-slide
+                        img(src="/assets/images/main-slider__bg.png" alt="BG").main-slider__bg
+                        img(src="/assets/images/main-slider__bg-table.png" alt="BG").main-slider__bg.main-slider__bg--table
+                        .main-slider__info
+                            .main-slider__title НИКОЛАЕВСКИЕ СЫРОВАРНИ
+                            .main-slider__text Выдержаные сыры с ярким характером
+                            a(href="##").main-slider__btn.btn.btn--white
+                                .btn__container
+                                    span Подробнее
+                                    span.main-slider__btn-arrow.btn__arrow
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                    .swiper-slide
+                        img(src="/assets/images/main-slider__bg.png" alt="BG").main-slider__bg
+                        img(src="/assets/images/main-slider__bg-table.png" alt="BG").main-slider__bg.main-slider__bg--table
+                        .main-slider__info
+                            .main-slider__title НИКОЛАЕВСКИЕ СЫРОВАРНИ
+                            .main-slider__text Выдержаные сыры с ярким характером
+                            a(href="##").main-slider__btn.btn.btn--white
+                                .btn__container
+                                    span Подробнее
+                                    span.main-slider__btn-arrow.btn__arrow
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                    .swiper-slide
+                        img(src="/assets/images/main-slider__bg.png" alt="BG").main-slider__bg
+                        img(src="/assets/images/main-slider__bg-table.png" alt="BG").main-slider__bg.main-slider__bg--table
+                        .main-slider__info
+                            .main-slider__title НИКОЛАЕВСКИЕ СЫРОВАРНИ
+                            .main-slider__text Выдержаные сыры с ярким характером
+                            a(href="##").main-slider__btn.btn.btn--white
+                                .btn__container
+                                    span Подробнее
+                                    span.main-slider__btn-arrow.btn__arrow
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                .swiper-pagination.main-slider-pagination
+                button(type="button").array-slider.array-slider--prev.main-slider-prev
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                button(type="button").array-slider.array-slider--next.main-slider-next
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+        +footer

@@ -1,0 +1,343 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/geolacetion.pug
+include layouts/components/footer.pug
+
+
+doctype html 
+html(lang='ru')
+  +m-head
+  body
+    +header
+    .container
+      .info
+        .custom-switch
+          label
+            input(type="checkbox")
+            span.custom-switch__btn
+            span.custom-switch__text Экспресс
+        svg.info__icon
+          use(xlink:href="/assets/icons/sprite.svg#info")
+    .container
+      .sceleton
+        .sceleton__header
+          .sceleton__title
+          .sceleton__btn
+            .sceleton__btn-text
+            .sceleton__btn-arrow
+        .sceleton__main
+          .sceleton__arrow
+          .sceleton__card
+            .sceleton__up
+            .sceleton__down
+              .sceleton__info
+                .sceleton__info-case
+                  .sceleton__info-case-title
+                  .sceleton__info-case-text
+                .sceleton__info-text
+                .sceleton__info-text
+              .sceleton__bottom
+                .sceleton__prices
+                  .sceleton__price-sale
+                  .sceleton__price
+                .sceleton__cart
+          .sceleton__card
+            .sceleton__up
+            .sceleton__down
+              .sceleton__info
+                .sceleton__info-case
+                  .sceleton__info-case-title
+                  .sceleton__info-case-text
+                .sceleton__info-text
+                .sceleton__info-text
+              .sceleton__bottom
+                .sceleton__prices
+                  .sceleton__price-sale
+                  .sceleton__price
+                .sceleton__cart
+          .sceleton__card
+            .sceleton__up
+            .sceleton__down
+              .sceleton__info
+                .sceleton__info-case
+                  .sceleton__info-case-title
+                  .sceleton__info-case-text
+                .sceleton__info-text
+                .sceleton__info-text
+              .sceleton__bottom
+                .sceleton__prices
+                  .sceleton__price-sale
+                  .sceleton__price
+                .sceleton__cart
+          .sceleton__card
+            .sceleton__up
+            .sceleton__down
+              .sceleton__info
+                .sceleton__info-case
+                  .sceleton__info-case-title
+                  .sceleton__info-case-text
+                .sceleton__info-text
+                .sceleton__info-text
+              .sceleton__bottom
+                .sceleton__prices
+                  .sceleton__price-sale
+                  .sceleton__price
+                .sceleton__cart
+          .sceleton__card
+            .sceleton__up
+            .sceleton__down
+              .sceleton__info
+                .sceleton__info-case
+                  .sceleton__info-case-title
+                  .sceleton__info-case-text
+                .sceleton__info-text
+                .sceleton__info-text
+              .sceleton__bottom
+                .sceleton__prices
+                  .sceleton__price-sale
+                  .sceleton__price
+                .sceleton__cart
+    .container
+      .sceleton.sceleton--green
+        .sceleton__header
+          .sceleton__title
+          .sceleton__btn
+            .sceleton__btn-text
+            .sceleton__btn-arrow
+        .sceleton__tags
+          .sceleton__tag-big
+          .sceleton__tag
+          .sceleton__tag
+          .sceleton__tag
+          .sceleton__tag
+          .sceleton__tag-arrow
+        .sceleton__main
+          .sceleton__arrow
+          .sceleton__card
+            .sceleton__up
+            .sceleton__down
+              .sceleton__info
+                .sceleton__info-case
+                  .sceleton__info-case-title
+                  .sceleton__info-case-text
+                .sceleton__info-text
+                .sceleton__info-text
+              .sceleton__bottom
+                .sceleton__prices
+                  .sceleton__price-sale
+                  .sceleton__price
+                .sceleton__cart
+          .sceleton__card
+            .sceleton__up
+            .sceleton__down
+              .sceleton__info
+                .sceleton__info-case
+                  .sceleton__info-case-title
+                  .sceleton__info-case-text
+                .sceleton__info-text
+                .sceleton__info-text
+              .sceleton__bottom
+                .sceleton__prices
+                  .sceleton__price-sale
+                  .sceleton__price
+                .sceleton__cart
+          .sceleton__card
+            .sceleton__up
+            .sceleton__down
+              .sceleton__info
+                .sceleton__info-case
+                  .sceleton__info-case-title
+                  .sceleton__info-case-text
+                .sceleton__info-text
+                .sceleton__info-text
+              .sceleton__bottom
+                .sceleton__prices
+                  .sceleton__price-sale
+                  .sceleton__price
+                .sceleton__cart
+          .sceleton__card
+            .sceleton__up
+            .sceleton__down
+              .sceleton__info
+                .sceleton__info-case
+                  .sceleton__info-case-title
+                  .sceleton__info-case-text
+                .sceleton__info-text
+                .sceleton__info-text
+              .sceleton__bottom
+                .sceleton__prices
+                  .sceleton__price-sale
+                  .sceleton__price
+                .sceleton__cart
+          .sceleton__card
+            .sceleton__up
+            .sceleton__down
+              .sceleton__info
+                .sceleton__info-case
+                  .sceleton__info-case-title
+                  .sceleton__info-case-text
+                .sceleton__info-text
+                .sceleton__info-text
+              .sceleton__bottom
+                .sceleton__prices
+                  .sceleton__price-sale
+                  .sceleton__price
+                .sceleton__cart
+      //- .delivery-time
+      //-   .h3.mb-24 Выберите время доставки
+      //-   ul.delivery-time__list.custom-scroll
+      //-     li.delivery-time__item.delivery-time__item--active 
+      //-       .delivery-time__item-header
+      //-         .delivery-time__item-header-title Сегодня
+      //-         .delivery-time__item-header-text 22.09 (пятница)
+      //-       ul.delivery-time__item-main
+      //-         li.delivery-time__item-time
+      //-           button.delivery-time__item-time-btn cегодня с 16:00 до 18:00
+      //-         li.delivery-time__item-time
+      //-           button.delivery-time__item-time-btn cегодня с 18:00 до 20:00
+      //-         li.delivery-time__item-time
+      //-           button.delivery-time__item-time-btn cегодня с 20:00 до 22:00
+      //-         li.delivery-time__item-time
+      //-           button.delivery-time__item-time-btn cегодня с 20:00 до 22:00
+      //-     li.delivery-time__item 
+      //-       .delivery-time__item-header
+      //-         .delivery-time__item-header-title Завтра
+      //-         .delivery-time__item-header-text 23.09 (суббота)
+      //-       ul.delivery-time__item-main
+      //-         li.delivery-time__item-time
+      //-           button.delivery-time__item-time-btn cегодня с 16:00 до 18:00
+      //-         li.delivery-time__item-time
+      //-           button.delivery-time__item-time-btn cегодня с 18:00 до 20:00
+      //-         li.delivery-time__item-time
+      //-           button.delivery-time__item-time-btn cегодня с 20:00 до 22:00
+      //-         li.delivery-time__item-time
+      //-           button.delivery-time__item-time-btn cегодня с 20:00 до 22:00
+      //-     li.delivery-time__item 
+      //-       .delivery-time__item-header
+      //-         .delivery-time__item-header-title Послезавтра
+      //-         .delivery-time__item-header-text 24.09 (воскресенье)
+      //-       ul.delivery-time__item-main
+      //-         li.delivery-time__item-time
+      //-           button.delivery-time__item-time-btn cегодня с 16:00 до 18:00
+      //-         li.delivery-time__item-time
+      //-           button.delivery-time__item-time-btn cегодня с 18:00 до 20:00
+      //-         li.delivery-time__item-time
+      //-           button.delivery-time__item-time-btn cегодня с 20:00 до 22:00
+      //-         li.delivery-time__item-time
+      //-           button.delivery-time__item-time-btn cегодня с 20:00 до 22:00
+      .custom-select.js-select
+        button(type='button').custom-select__header
+          span Заменить на аналогичные по выбору сборщика
+          svg
+            use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+        .custom-select__case
+          .custom-select__items
+            label.custom-radio__label.custom-select__item 
+              input(type="radio" name="changeProduct" value="" checked)
+              span.custom-radio__btn 
+              span Заменить на аналогичные по мнению сборщика
+            label.custom-radio__label.custom-select__item 
+              input(type="radio" name="changeProduct" value="")
+              span.custom-radio__btn 
+              span Позвонить мне. Если не дозвонились, заменить на аналогичный товар
+            label.custom-radio__label.custom-select__item 
+              input(type="radio" name="changeProduct" value="")
+              span.custom-radio__btn 
+              span Убрать товар из корзины
+      //- .custom-select.custom-select--active.js-select
+      //-   button(type='button').custom-select__header.custom-select__header--fill
+      //-     span Цена
+      //-     span.custom-select__text 24
+      //-     //- svg
+      //-     //-   use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+      //-     svg.custom-select__svg.custom-select__svg--close
+      //-       use(xlink:href="/assets/icons/sprite.svg#closeBurgerMobile")
+      //-   .custom-select__case
+      //-     .custom-select__items
+      //-       .custom-select__container
+      //-         .custom-input
+      //-           .custom-input__container
+      //-               input(type="text").custom-input__text
+      //-               label.custom-input__placeholder От
+      //-         .custom-input
+      //-           .custom-input__container
+      //-               input(type="text").custom-input__text
+      //-               label.custom-input__placeholder До
+      //-       .slide
+      //-         .js-slide
+      //-         .slide__container
+      //-           .slide__number.js-slide__one
+      //-           .slide__number.js-slide__two
+      //-       .btn.btn--green.custom-select__btn Применить
+      //- .custom-select.js-select
+      //-   button(type='button').custom-select__header.custom-select__header--fill
+      //-     span Бренд
+      //-     svg
+      //-       use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+      //-   .custom-select__case
+      //-     .custom-select__items
+      //-       .custom-select__scroll.custom-scroll
+      //-         label.custom-checkbox
+      //-           input(type="checkbox" name="").custom-checkbox__input
+      //-           span.custom-checkbox__text Черкизово
+      //-         label.custom-checkbox
+      //-           input(type="checkbox" name="").custom-checkbox__input
+      //-           span.custom-checkbox__text Медвёдовские традиции
+      //-         label.custom-checkbox
+      //-           input(type="checkbox" name="").custom-checkbox__input
+      //-           span.custom-checkbox__text Агрокомплекс Выселковский
+      //-         label.custom-checkbox
+      //-           input(type="checkbox" name="").custom-checkbox__input
+      //-           span.custom-checkbox__text Честный выбор
+      //-         label.custom-checkbox
+      //-           input(type="checkbox" name="").custom-checkbox__input
+      //-           span.custom-checkbox__text Черкизово
+      //-         label.custom-checkbox
+      //-           input(type="checkbox" name="").custom-checkbox__input
+      //-           span.custom-checkbox__text Медвёдовские традиции
+      //-         label.custom-checkbox
+      //-           input(type="checkbox" name="").custom-checkbox__input
+      //-           span.custom-checkbox__text Агрокомплекс Выселковский
+      //-         label.custom-checkbox
+      //-           input(type="checkbox" name="").custom-checkbox__input
+      //-           span.custom-checkbox__text Честный выбор
+
+      //-       .btn.btn--green.custom-select__btn Применить
+      //- label.custom-radio__label.custom-select__item 
+      //- +geolacetion
+      //- button(type="button", data-opeeen) открыть
+      //- .alert.alert--error Ошибка. Не удалось подписаться на рассылку. Повторите попытку.
+      //- .alert.alert--success Вы подписались на рассылку индивидуальных предложений и уникальных скидок!
+      //- .alert.alert--warning Вы уже подписаны на рассылку индивидуальных предложений и уникальных скидок!
+      //- .container
+
+      //- .container 
+      //- .field
+      //-   //- .field--error
+      //-   .custom-input
+      //-     .custom-input__container
+      //-         input(type="text" required).custom-input__text
+      //-         label.custom-input__placeholder Город,улица,дом
+      //-         .custom-input__icons-container
+      //-           .custom-input__clear
+      //-           .loader-spinner.loader-spinner--input
+      //-         //- .custom-input__img
+      //-         //-     img(src="/assets/images/clear_input.svg" alt="Clear")
+      //-   .field__error-text Необходимо указать адрес с точностью до номера дома
+      //- .field.field--error
+      //-   .custom-input
+      //-     .custom-input__container
+      //-         input(type="text" required).custom-input__text
+      //-         label.custom-input__placeholder Город,улица,дом
+      //-         //- .custom-input__img
+      //-         //-     img(src="/assets/images/clear_input.svg" alt="Clear")
+      //-   .field__error-text Необходимо указать адрес с точностью до номера дома
+      //- .field.field--error
+      //-   .custom-input
+      //-     .custom-input__container
+      //-         input(type="text" required).custom-input__text
+      //-         label.custom-input__placeholder Город,улица,дом
+      //-         //- .custom-input__img
+      //-         //-     img(src="/assets/images/clear_input.svg" alt="Clear")
+      //-   .field__error-text Необходимо указать адрес с точностью до номера дома
++footer

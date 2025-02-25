@@ -1,0 +1,130 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    .breadcrumb__item Новости
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                h2 Новости
+                //- .page-title__count 233 #[span товара]
+        .container
+            .category-filters
+                .category-filter
+                    |За все время
+                    button.category-filter__btn
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#closeCategory")
+                .category-filter.category-filter--active
+                    |2023
+                    button.category-filter__btn
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#closeCategory")
+                .category-filter
+                    |2023
+                    button.category-filter__btn
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#closeCategory")
+            .catalog-list__items
+                a(href='##').card-content
+                    .card-content__img 
+                        img(src="/assets/images/news.png" alt="News")
+                    .card-content__info
+                        .card-content__text 12 января 2023
+                        .card-content__text 
+                            svg
+                                use(xlink:href="/assets/icons/sprite.svg#eye") 
+                            | 101
+                    .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                a(href='##').card-content
+                    .card-content__img 
+                        img(src="/assets/images/news.png" alt="News")
+                    .card-content__info
+                        .card-content__text 12 января 2023
+                        .card-content__text 
+                            svg
+                                use(xlink:href="/assets/icons/sprite.svg#eye") 
+                            | 101
+                    .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                a(href='##').card-content
+                    .card-content__img 
+                        img(src="/assets/images/news.png" alt="News")
+                    .card-content__info
+                        .card-content__text 12 января 2023
+                        .card-content__text 
+                            svg
+                                use(xlink:href="/assets/icons/sprite.svg#eye") 
+                            | 101
+                    .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                a(href='##').card-content
+                    .card-content__img 
+                        img(src="/assets/images/news.png" alt="News")
+                    .card-content__info
+                        .card-content__text 12 января 2023
+                        .card-content__text 
+                            svg
+                                use(xlink:href="/assets/icons/sprite.svg#eye") 
+                            | 101
+                    .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                a(href='##').card-content
+                    .card-content__img 
+                        img(src="/assets/images/news.png" alt="News")
+                    .card-content__info
+                        .card-content__text 12 января 2023
+                        .card-content__text 
+                            svg
+                                use(xlink:href="/assets/icons/sprite.svg#eye") 
+                            | 101
+                    .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                a(href='##').card-content
+                    .card-content__img 
+                        img(src="/assets/images/news.png" alt="News")
+                    .card-content__info
+                        .card-content__text 12 января 2023
+                        .card-content__text 
+                            svg
+                                use(xlink:href="/assets/icons/sprite.svg#eye") 
+                            | 101
+                    .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                a(href='##').card-content
+                    .card-content__img 
+                        img(src="/assets/images/news.png" alt="News")
+                    .card-content__info
+                        .card-content__text 12 января 2023
+                        .card-content__text 
+                            svg
+                                use(xlink:href="/assets/icons/sprite.svg#eye") 
+                            | 101
+                    .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                a(href='##').card-content
+                    .card-content__img 
+                        img(src="/assets/images/news.png" alt="News")
+                    .card-content__info
+                        .card-content__text 12 января 2023
+                        .card-content__text 
+                            svg
+                                use(xlink:href="/assets/icons/sprite.svg#eye") 
+                            | 101
+                    .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+            .catalog-list__btn.btn.btn--gray-light Показать еще
+            .pagination
+                a(href="##").pagination__prev
+                a(href="##").pagination__item.pagination__item--active 1
+                a(href="##").pagination__item 2
+                a(href="##").pagination__item 3
+                a(href="##").pagination__next
+        +footer

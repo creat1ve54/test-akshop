@@ -1,0 +1,271 @@
+.stock {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f28a76;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  max-height: 243px;
+  //min-width: 670px;
+
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__left {
+    padding: 28px 0px 34px 28px;
+  }
+
+  &__right {
+    flex: 0 0 50%;
+    width: 324px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    margin-bottom: 24px;
+    border-radius: 17px 0px;
+    background: $white;
+    padding: 8px 28px;
+    color: #af3f45;
+    font-family: $ffCirce, $ffDefault;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    color: $white;
+    text-transform: uppercase;
+    font-variant-numeric: ordinal;
+    font-feature-settings: 'ss02' on, 'ss05' on, 'liga' off;
+    font-family: $ffCirce, $ffDefault;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 110%;
+  }
+
+  &__text {
+    color: $white;
+    font-family: $ffCirce, $ffDefault;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 100px 100px 0px 100px;
+    background: #af3f45;
+    width: 87px;
+    height: 87px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 27px;
+
+    &-container {
+      display: flex;
+      align-items: end;
+    }
+
+    &-title {
+      margin-right: 4px;
+      color: $white;
+      font-family: $ffCirce, $ffDefault;
+      font-size: 31px;
+      font-weight: 700;
+      line-height: 83.5%;
+    }
+
+    &-text {
+      margin-bottom: 3px;
+      color: $white;
+      font-family: $ffCirce, $ffDefault;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 106.5%;
+    }
+
+    &-description {
+      color: $white;
+      font-family: $ffCirce, $ffDefault;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 88%;
+
+      &--symbol {
+        color: $white;
+        font-family: $ffCirce, $ffDefault;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 106.5%;
+      }
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    width: 156px;
+    left: 45%;
+    transform: translateX(-45%);
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('/assets/images/decor.svg');
+      background-repeat: no-repeat;
+      width: 78px;
+      height: 41px;
+      right: 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('/assets/images/decor.svg');
+      background-repeat: no-repeat;
+      width: 78px;
+      height: 41px;
+      left: 0;
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    //min-width: 468px;
+  }
+
+  @media screen and (max-width: $table) {
+    //min-width: 354px;
+    &__title {
+      font-size: 16px;
+      line-height: 110%;
+    }
+
+    &__text {
+      font-size: 10px;
+    }
+
+    &__price {
+      width: 66px;
+      height: 64px;
+      left: 53%;
+      &-title {
+        font-size: 18px;
+      }
+      &-text {
+        font-size: 8px;
+      }
+      &-description {
+        font-size: 8px;
+      }
+    }
+
+    &__decor {
+      width: 88px;
+      &::before {
+        width: 45px;
+        height: 23px;
+        background-size: 45px 23px;
+      }
+      &::after {
+        width: 45px;
+        height: 23px;
+        background-size: 45px 23px;
+      }
+    }
+
+    &__badge {
+      font-size: 8px;
+      padding: 4px 16px;
+      border-radius: 8px 0px;
+    }
+
+    &__left {
+      padding: 12px;
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    //max-width: none;
+    &__left {
+      padding: vw(12px, $smallMobile) 0px vw(18px, $smallMobile) vw(12px, $smallMobile);
+    }
+
+    &__right {
+      width: vw(168px, $smallMobile);
+      border-radius: vw(4px, $smallMobile);
+    }
+
+    &__badge {
+      margin-bottom: vw(12px, $smallMobile);
+      border-radius: vw(8px, $smallMobile) 0px;
+      padding: vw(4px, $smallMobile) vw(16px, $smallMobile);
+      font-size: vw(10px, $smallMobile);
+    }
+
+    &__title {
+      margin-bottom: vw(12px, $smallMobile);
+      font-size: vw(16px, $smallMobile);
+    }
+
+    &__text {
+      font-size: vw(10px, $smallMobile);
+    }
+
+    &__price {
+      border-radius: vw(100px, $smallMobile) vw(100px, $smallMobile) 0px vw(100px, $smallMobile);
+      width: vw(66px, $smallMobile);
+      height: vw(67px, $smallMobile);
+      bottom: vw(18px, $smallMobile);
+
+      &-title {
+        margin-right: vw(4px, $smallMobile);
+        font-size: vw(18px, $smallMobile);
+      }
+
+      &-text {
+        margin-bottom: vw(3px, $smallMobile);
+        font-size: vw(8px, $smallMobile);
+      }
+
+      &-description {
+        font-size: vw(8px, $smallMobile);
+
+        &--symbol {
+          font-size: vw(12px, $smallMobile);
+        }
+      }
+    }
+
+    &__decor {
+      width: vw(87px, $smallMobile);
+      &::after {
+        width: vw(44px, $smallMobile);
+        height: vw(23px, $smallMobile);
+        background-size: vw(44px, $smallMobile) vw(23px, $smallMobile);
+      }
+      &::before {
+        width: vw(44px, $smallMobile);
+        height: vw(23px, $smallMobile);
+        background-size: vw(44px, $smallMobile) vw(23px, $smallMobile);
+      }
+    }
+  }
+}

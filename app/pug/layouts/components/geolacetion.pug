@@ -1,0 +1,167 @@
+mixin geolacetion
+    //- .geolacetion
+        .geolacetion__left
+            .geolacetion__left-caption
+                .geolacetion__left-title Выберите способ получения
+            .geolacetion__left-change
+                .geolacetion__left-change-btn.geolacetion__left-change-btn--active
+                    input(id="change1" type="radio" name="changeGeolacetion" value="Доставка" checked)
+                    label( for="change1").btn Доставка
+                .geolacetion__left-change-btn
+                    input(id="change2" type="radio" name="changeGeolacetion" value="Самовывоз")
+                    label(for="change2").btn Самовывоз
+            .custom-input.custom-input--active.geolacetion__left-input.geolacetion__left-input--active
+                //- .custom-input__container.geolacetion__left-input-container
+                .popup__header.mb-16
+                    button(type="button").btn-back
+                    h3 Введите город, улицу, дом
+                .custom-input
+                    input(type="text" required).custom-input__text.geolacetion__left-input-text
+                    label.custom-input__placeholder.geolacetion__left-input-placeholder Город,улица,дом
+                    .custom-input__clear.geolacetion__left-input-img
+                        //- img(src="/assets/images/clear_input.svg" alt="Clear")
+                        //- .custom-input__error.geolacetion__left-input-error Необходимо указать адрес с точностью до номера дома
+                        //- .custom-input__list
+                            ul.custom-input__items.custom-scroll
+                                li.custom-input__item
+                                    .custom-input__item-up ул. Рашпилевская, 22
+                                    .custom-input__item-down
+                                        .custom-input__item-city Краснодарский край, г. Новороссийск
+                                li.custom-input__item
+                                    .custom-input__item-up ул. Рашпилевская, 22
+                                    .custom-input__item-down
+                                        .custom-input__item-city Краснодарский край, г. Новороссийск
+                                li.custom-input__item
+                                    .custom-input__item-up ул. Рашпилевская, 22
+                                    .custom-input__item-down
+                                        .custom-input__item-city Краснодарский край, г. Новороссийск
+                                li.custom-input__item
+                                    .custom-input__item-up ул. Рашпилевская, 22
+                                    .custom-input__item-down
+                                        .custom-input__item-city Краснодарский край, г. Новороссийск
+                                li.custom-input__item
+                                    .custom-input__item-up ул. Рашпилевская, 22
+                                    .custom-input__item-down
+                                        .custom-input__item-city Краснодарский край, г. Новороссийск
+                                li.custom-input__item
+                                    .custom-input__item-up ул. Рашпилевская, 22
+                                    .custom-input__item-down
+                                        .custom-input__item-city Краснодарский край, г. Новороссийск
+            .geolacetion__left-subtitle Выберите способ доставки
+            .geolacetion__left-delivery-change
+                .geolacetion__left-delivery-change-btn.geolacetion__left-delivery-change-btn--active
+                    .geolacetion__left-delivery-change-btn-up
+                        .geolacetion__left-delivery-change-btn-title Экспресс
+                        .geolacetion__left-delivery-change-btn-text Как можно раньше
+                    .geolacetion__left-delivery-change-btn-count 1233 товара
+                .geolacetion__left-delivery-change-btn
+                    .geolacetion__left-delivery-change-btn-up
+                        .geolacetion__left-delivery-change-btn-title Стандарт
+                        .geolacetion__left-delivery-change-btn-text Ближайшая доставка: #[span 16:00 - 18:00]
+                    .geolacetion__left-delivery-change-btn-count 1233 товара
+            button(type="button").btn.btn--green.geolacetion__left-btn Выбрать доставку
+        .geolacetion__right
+            .geolacetion__right-close
+                img(src="/assets/images/close_popup.svg" alt="")
+            .btn.btn--white.geolacetion__right-shop
+                .btn__container
+                    svg.geolacetion__right-shop-img
+                        use(xlink:href="/assets/icons/sprite.svg#shopBtn")
+                    .geolacetion__right-shop-text Список магазинов
+    .geolacetion
+        .geolacetion__left
+            .geolacetion__left-caption
+                .geolacetion__left-title Выберите способ получения
+            .geolacetion__left-change
+                .btn.geolacetion__left-change-btn 
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#delivery")
+                    span Доставка
+                .btn.geolacetion__left-change-btn.geolacetion__left-change-btn--active 
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#pin")
+                    span Самовывоз
+            .custom-input.geolacetion__left-input
+                .custom-input__container.geolacetion__left-input-container
+                    input(type="text" required).custom-input__text.geolacetion__left-input-text
+                    label.custom-input__placeholder.geolacetion__left-input-placeholder Город,улица,дом
+                    .custom-input__img.geolacetion__left-input-img
+                        img(src="/assets/images/clear_input.svg" alt="Clear")
+                .custom-input__error.geolacetion__left-input-error Необходимо указать адрес с точностью до номера дома
+            button(type="button").btn.btn--green.geolacetion__left-btn Выбрать доставку
+        .geolacetion__right
+            .geolacetion__right-close
+                img(src="/assets/images/close_popup.svg" alt="")
+            .btn.btn--white.geolacetion__right-shop
+                .btn__container
+                    img(src="/assets/images/shop_btn.svg" alt="").geolacetion__right-shop-img
+                    .geolacetion__right-shop-text Список магазинов
+    //- .geolacetion
+        .geolacetion__left
+            .geolacetion__left-caption.geolacetion__left-caption--active
+                img(src="/assets/images/arrow_back.svg" alt="")
+                .geolacetion__left-title Список магазинов
+            //- .geolacetion__left-change
+            //-     .btn.geolacetion__left-change-btn Доставка
+            //-     .btn.geolacetion__left-change-btn.geolacetion__left-change-btn--active Самовывоз
+            .custom-input.geolacetion__left-input
+                .custom-input__container.geolacetion__left-input-container
+                    input(type="text" required).custom-input__text.geolacetion__left-input-text
+                    label.custom-input__placeholder.geolacetion__left-input-placeholder Город,улица,дом
+                    .custom-input__img.geolacetion__left-input-img
+                        img(src="/assets/images/clear_input.svg" alt="Clear")
+                .custom-input__error.geolacetion__left-input-error Необходимо указать адрес с точностью до номера дома
+                //- .custom-input__list
+                    ul.custom-input__items.custom-input__items--select-store.custom-scroll
+                        li.custom-input__item
+                            .custom-input__item-up г. #[span Краснодар], ул. Рашпилевская, 22
+                            .custom-input__item-down
+                                .custom-input__item-time Закроется в 21:00
+                                .custom-input__item-distance
+                                    img(src="/assets/images/navigation-arrow.svg" alt="Navigation Arrow")
+                                    span 15,2 км
+                        li.custom-input__item
+                            .custom-input__item-up г. #[span Краснодар], ул. Рашпилевская, 22
+                            .custom-input__item-down
+                                .custom-input__item-time Закроется в 21:00
+                                .custom-input__item-distance
+                                    img(src="/assets/images/navigation-arrow.svg" alt="Navigation Arrow")
+                                    span 15,2 км
+                        li.custom-input__item
+                            .custom-input__item-up г. #[span Краснодар], ул. Рашпилевская, 22
+                            .custom-input__item-down
+                                .custom-input__item-time Закроется в 21:00
+                                .custom-input__item-distance
+                                    img(src="/assets/images/navigation-arrow.svg" alt="Navigation Arrow")
+                                    span 15,2 км
+                        li.custom-input__item
+                            .custom-input__item-up г. #[span Краснодар], ул. Рашпилевская, 22
+                            .custom-input__item-down
+                                .custom-input__item-time Закроется в 21:00
+                                .custom-input__item-distance
+                                    img(src="/assets/images/navigation-arrow.svg" alt="Navigation Arrow")
+                                    span 15,2 км
+                        li.custom-input__item
+                            .custom-input__item-up г. #[span Краснодар], ул. Рашпилевская, 22
+                            .custom-input__item-down
+                                .custom-input__item-time Закроется в 21:00
+                                .custom-input__item-distance
+                                    img(src="/assets/images/navigation-arrow.svg" alt="Navigation Arrow")
+                                    span 15,2 км
+                        li.custom-input__item
+                            .custom-input__item-up г. #[span Краснодар], ул. Рашпилевская, 22
+                            .custom-input__item-down
+                                .custom-input__item-time Закроется в 21:00
+                                .custom-input__item-distance
+                                    img(src="/assets/images/navigation-arrow.svg" alt="Navigation Arrow")
+                                    span 15,2 км
+            button(type="button").btn.btn--green.geolacetion__left-btn Выбрать доставку
+        .geolacetion__right
+            .geolacetion__right-close
+                img(src="/assets/images/close_popup.svg" alt="")
+            .btn.btn--white.geolacetion__right-shop
+                .btn__container
+                    //- img(src="/assets/images/shop_btn.svg" alt="").geolacetion__right-shop-img
+                    svg.geolacetion__right-shop-img
+                        use(xlink:href="/assets/icons/sprite.svg#shopBtn")
+                    .geolacetion__right-shop-text Список магазинов

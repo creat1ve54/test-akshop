@@ -1,0 +1,162 @@
+.recipes {
+  margin-bottom: 60px;
+  &__container {
+    padding: 60px 70px;
+    column-gap: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background-image: url('/assets/images/recipes__bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__left {
+    max-width: 418px;
+  }
+
+  .card-info {
+    height: auto;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    flex: 0 0 auto;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__items {
+    margin-top: 20px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__item {
+    border-radius: 4px;
+    background: $gray5;
+    padding: 4px 8px;
+    color: $gray3;
+    font-family: $ffCirce, $ffDefault;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  &__description {
+    margin-bottom: 40px;
+    color: $gray2;
+    font-family: $ffCirce, $ffDefault;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  .btn {
+    width: 168px;
+  }
+
+  @media screen and (max-width: $laptop) {
+    &__container {
+      background-position: right;
+    }
+  }
+
+  @media screen and (max-width: $table) {
+    &__container {
+      padding: 30px;
+    }
+
+    &__right {
+      flex-direction: column;
+      row-gap: 12px;
+    }
+
+    .card-info {
+      max-width: 309px;
+      flex-direction: row;
+
+      &__text {
+        margin-bottom: 0;
+      }
+
+      &__description {
+        font-size: 14px;
+        -webkit-line-clamp: 7;
+      }
+      &__up {
+        flex: 0 0 154px;
+        margin-right: 16px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    margin-bottom: 24px;
+
+    &__left {
+      max-width: 100%;
+    }
+
+    .container {
+      padding: 0;
+    }
+
+    &__container {
+      padding: vw(30px, $smallMobile);
+      height: auto;
+      border-radius: 16px;
+      background-position: unset;
+    }
+
+    &__items {
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      width: auto;
+    }
+
+    .card-info {
+      max-width: none;
+      width: 100%;
+      flex: 1 1 auto;
+      // max-height: vw(190px, $smallMobile);
+      flex-direction: column;
+
+      &__img {
+        height: vw(100px, $smallMobile);
+      }
+      &__description {
+        font-size: 12px;
+        -webkit-line-clamp: 2;
+      }
+      &__up {
+        flex: none;
+        margin-right: 0px;
+      }
+    }
+
+    &__right {
+      width: 100%;
+      column-gap: vw(9px, $smallMobile);
+      &--mobile {
+        display: flex;
+        flex-direction: row;
+      }
+
+      &--desctop {
+        display: none;
+      }
+    }
+  }
+}

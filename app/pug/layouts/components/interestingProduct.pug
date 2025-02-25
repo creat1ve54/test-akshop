@@ -1,0 +1,23 @@
+include /cardsSwiper.pug
+
+mixin interestingProduct
+    .interesting-product
+        .container
+            .interesting-product__container
+                .header-title
+                    h2 Новинки
+                    a(href='##').header-title__show
+                        .header-title__show-text Показать все
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                .interesting-product__items
+                    a(href="##").interesting-product__item.interesting-product__item--active Всё
+                    a(href="##").interesting-product__item Молоко, сыры, яйцо
+                    a(href="##").interesting-product__item Мясо, колбасы, полуфабрикаты
+                    a(href="##").interesting-product__item Бакалея
+                    a(href="##").interesting-product__item Фрукты и овощи
+                    a(href="##").interesting-product__item Здоровое питание
+                    a(href="##").interesting-product__item 
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                +cardsSwiper

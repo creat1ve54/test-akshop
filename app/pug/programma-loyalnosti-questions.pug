@@ -1,0 +1,99 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    .breadcrumb__item Программа лояльности
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                h2 Программа лояльности
+                //- .page-title__count 233 #[span товара]
+        .container
+            .section.mb-32
+                .section__left
+                    .link-section
+                        //- .link-section__container
+                        //-     .link-section__img
+                        //-         img(src="/assets/images/milk-catalog.png" alt="Milk Catalog")
+                        //-     .link-section__info
+                        //-         .link-section__info-title Молоко, сыры, яйцо
+                        //-         .link-section__info-value 154  товара
+                        .link-section__list
+                            a(href="##").link-section__item Преимущества
+                            a(href="##").link-section__item Накопление и списание
+                            a(href="##").link-section__item.link-section__item--active Частые вопросы 
+                            a(href="##").link-section__item Правила использования
+                .section__right
+                    .h4.mb-20 Что делать если потерял карту?
+                    .p.mb-32 Приобретите новую карту в фирменном магазине «Агрокомплекс Выселковский». Зарегистрируйте ее удобным для Вас способом. Обратитесь на горячую линию по телефону 8 800 250-06-90, сообщите что ваша карта утеряна, мы переместим накопленные баллы со старой карты на новую.
+                    .h4.mb-20 Нужно ли что-то платить за пользование картой?
+                    .p.mb-32 Стоимость карты 20 рублей, дальнейшее использование карты абсолютно бесплатное.
+                    .h4.mb-20 Зачем мне регистрировать карту?
+                    .p.mb-32 Чтобы получить максимум возможных бонусов и преференций, как участник бонусной программы.
+                    .h4.mb-20 Где работает бонусная программа?
+                    .p.mb-32 Бонусная карта действительна во всех фирменных магазинах «Агрокомплекс Выселковский», а также в интернет-магазине Агрокомплексшоп.
+                    .h4.mb-20 Как узнать сумму накопленных бонусов?
+                    .p.mb-32 На данный момент сумму накопленных баллов можно узнать в Личном кабинете, зарегистрировав карту, в магазине у кассира, либо в чеке, дополнительном к основному.
+                    .h4.mb-20 Кому передаются мои персональные данные?
+                    .p.mb-32 Ваши персональные данные не передаются третьим лицам, они хранятся в защищенной системе и собираются для внутреннего использования. Например, зная вашу дату рождения, мы подготовим для вас специальные скидки и предложения.
+        .cards-swiper
+            .container
+                .h2 Наши акции
+                .cards-swiper__container
+                    button(type="button").js-cards-swiper-next.array-slider.array-slider--white.array-slider--next
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                    button(type="button").js-cards-swiper-prev.array-slider.array-slider--white.array-slider--prev
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                    .js-cards-swiper.swiper
+                        .swiper-wrapper
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+        +footer

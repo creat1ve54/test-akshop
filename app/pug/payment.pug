@@ -1,0 +1,66 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    .breadcrumb__item Доставка и оплата
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                h2 Доставка и оплата
+                //- .page-title__count 233 #[span товара]
+        .payment
+            .container
+                .h4.mb-20 Способы оплаты
+                .p.mb-12 К оплате принимаем только банковские карты:
+                ul.payment__list
+                    li.payment__item 
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#card-mir")
+                    li.payment__item 
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#card-visa")
+                    li.payment__item 
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#card-mastercard")
+                .p После оформления, введите данные банковской карты. 
+                .p.mb-12 Для ее проверки будет списана и возвращена сумма в размере 5 рублей.
+                .p-bold Выполнение заказа осуществляется в четыре этапа:
+                ul.payment__stages
+                    li.payment__stage.p Вводите данные банковской карты для проведения ее проверки.
+                    li.payment__stage.p Наши сотрудники бережно собирают заказ и по факту комплектации осуществляется списание фактической суммы покупки.
+                    li.payment__stage.p Курьер доставляет Ваш заказ.
+                    li.payment__stage.p На электронную почту приходит электронный чек.
+                .p-bold Особенности выполнения заказа: #[span.p если в заказе присутствуют весовые товары, то стоимость заказа может отличаться от первоначальной в большую или меньшую сторону. ]
+                .p-bold Изменения в заказе осуществляются по согласованию с Вами.
+                .p.mb-12 Выбранную продукцию доставим в срок, не нарушая температурного режима хранения.
+                .p-bold Заказы курьером и в продуктоматы доставляются в выбранный Вами интервал времени ежедневно без выходных:
+                .p с 9:00 до 12:00
+                .p с 12:00 до 14:00
+                .p с 14:00 до 16:00
+                .p с 16:00 до 18:00
+                .p c 18:00 до 20:00
+                .p.mb-32 с 20:00 до 22:00 (не для всех городов)
+                .h4.mb-20 Способы доставки
+                .p-bold.mb-12 Доставка осуществляется курьером.
+                .p.mb-12 Курьер заранее позвонит для подтверждения адреса и времени доставки, пожалуйста, ответьте на звонок.
+                .p Стоимость доставки курьером в доступную зону доставки составляет #[span.p-bold 300 руб.]
+                .p-bold.mb-12 При заказе от 1500 руб., стоимость доставки бесплатная.
+                .p-bold.mb-32 Зоны доставки в городах: #[span.p Краснодар, Ростов-на-Дону, Ставрополь, Сочи, Адлер, Новороссийск, Анапа, Геленджик, Шахты, Пятигорск, Майкоп, ст. Выселки ]
+                //- img(src="/assets/images/map-payment.png", alt="Payment")
+                .payment__img
+                    img(src="/assets/images/MapPayment.svg" alt="mapDecor")
+        +footer

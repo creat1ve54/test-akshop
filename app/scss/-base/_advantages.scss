@@ -1,0 +1,109 @@
+.advantages {
+  &__container {
+    display: flex;
+    gap: 20px;
+
+    .btn {
+      max-width: 186px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    column-gap: 32px;
+    margin-top: 82px;
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/images/advantages-card-bg.png');
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 265px;
+
+    &-img {
+      position: absolute;
+      top: -50px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &-title {
+      font-family: $ffCirce, $ffDefault;
+      font-feature-settings: 'ss02' on, 'ss05' on, 'liga' off;
+      font-size: 32px;
+      line-height: 35px;
+      text-align: center;
+      color: $primary;
+      font-weight: 800;
+      span {
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 70px;
+      }
+
+      &--uppercase {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 52px;
+      }
+    }
+
+    &-texts {
+      display: flex;
+      .advantages__card-title {
+        font-size: 64px;
+        font-weight: 700;
+      }
+    }
+
+    &-text {
+      margin-top: 12px;
+      font-family: $ffCirce, $ffDefault;
+      font-feature-settings: 'ss02' on, 'ss05' on, 'liga' off;
+      font-size: 18px;
+      color: $gray1;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    margin-top: 32px;
+    padding: 12px;
+    border-top: 1px solid rgba($gray1, 0.3);
+    border-bottom: 1px solid rgba($gray1, 0.3);
+  }
+
+  @media screen and (max-width: $laptop) {
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      justify-content: center;
+      align-items: center;
+      gap: 70px;
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    &__container {
+      margin-top: 12px;
+      flex-direction: column;
+    }
+
+    &__left {
+      order: 1;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__cards {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+}

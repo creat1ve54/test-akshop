@@ -1,0 +1,21 @@
+mixin searchList
+    .search-list
+        .search-list__container 
+            div.search-list__items
+                a(href='##').search-list__item
+                    .search-list__item-left.search-list__item-left--no-photo
+                        img(src="/assets/images/chees.svg", alt="Chees")
+                    .search-list__item-right
+                        .search-list__item-right-title #[span Молоко]
+                        .search-list__item-right-text Молоко,  сыра, яйцо #[span /] Молоко
+                a(href='##').search-list__item
+                    .search-list__item-left
+                        img(src="/assets/images/milk.png", alt="Milk")
+                    .search-list__item-right
+                        .search-list__item-right-title #[span Молоко], 3,2% Агрокомплекс 900мл
+                        //- .search-list__item-right-text Молоко,  сыра, яйцо #[span /] Молоко
+                        .search-list__item-right-prices
+                            .search-list__item-right-price 134.99 ₽ 
+                            .search-list__item-right-price-old 169.99 ₽/кг
+
+            button(type="button").search-list__btn Показать все

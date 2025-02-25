@@ -1,0 +1,181 @@
+.account {
+  .h2 {
+    color: $primary2Contrast;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    color: rgba($gray1, 0.75);
+    font-family: $ffCirce, $ffDefault;
+    font-size: 16px;
+    svg {
+      margin-right: 12px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    svg {
+      fill: $primary;
+      width: 32px;
+      height: 29px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    // grid-auto-flow: column;
+    // display: flex;
+    // flex-wrap: wrap;
+    gap: 20px;
+    &-card {
+      background-color: $primary3;
+      border-radius: 20px;
+      padding: 32px 24px;
+
+      .p-bold {
+        // color: $primary;
+        color: #5c5c5c;
+      }
+
+      .p{
+        display: inline;
+        color: #5c5c5c;
+      }
+
+      &--yellow {
+        background-color: #fff0ca;
+        .p-bold {
+          color: #dd9f00;
+        }
+      }
+
+      &:last-child {
+        // width: 100%;
+        grid-area: 2/1/2/3;
+      }
+
+      svg {
+        margin-right: 8px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__left {
+    flex: 1 1 570px;
+  }
+  &__right {
+    flex: 1 1 540px;
+  }
+
+  &__orders {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__order {
+    display: flex;
+    padding: 24px;
+    border-radius: 8px;
+
+    box-shadow: 2px 4px 16px 0px rgba(92, 92, 92, 0.08);
+    &-images {
+      margin-right: 16px;
+      flex: 0 0 auto;
+
+      &-container {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+      }
+
+      img {
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+    .p {
+      color: rgba($gray1, 0.5);
+    }
+
+    .p-bold {
+      color: rgba($gray1, 0.5);
+    }
+
+    &-texts {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family: $ffCirce, $ffDefault;
+      color: $primary;
+      font-size: 16px;
+      font-weight: 400;
+
+      .p-bold {
+        margin-bottom: 4px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &-content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    
+  }
+
+  @media screen and (max-width: $laptop) {
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__order {
+      min-width: 480px;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__left {
+        flex: 1 1 auto;
+    }
+
+    &__right {
+        flex: 1 1 auto;
+    }
+
+    &__order {
+        min-width: auto;
+    }
+  }
+
+}

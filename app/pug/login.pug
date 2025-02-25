@@ -1,0 +1,48 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/geolacetion.pug
+include layouts/components/mainSliders.pug
+include layouts/components/catalog.pug
+
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        .container
+            .login
+                .login__header
+                    button(type="button").btn-back
+                    h2 Регистрация
+                .login__description Мы не нашли карту лояльности, зарегистрированную на номер телефона +7 (454) 546-45-41 #[br]Чтобы создать новую виртуальную карту, введите ваше имя и нажмите на кнопку #[br]«Зарегистрироваться»
+                .input
+                    .input__container.login__container
+                        input(type="text" required).input__text
+                        label.input__placeholder Ваше имя
+                        .input__img
+                    .input__container.login__container
+                        input(type="text" required).input__text
+                        label.input__placeholder Ваша фамилия
+                        .input__img
+                    .input__container.login__container
+                        input(type="text" required).input__text
+                        label.input__placeholder Ваш e-mail
+                        .input__img
+                    //- .input__error Введен несуществующий адрес e-mail
+                button(type="button").btn.btn--green.login__btn Зарегистрироваться
+                label.custom-checkbox
+                    input(type="checkbox", name="").custom-checkbox__input
+                    span.custom-checkbox__text Соглашаюсь получать новости и специальные предложения
+                .login__info Нажимая на кнопку “Зарегистрироваться” Вы соглашаетесь с #[a(href="##") офертой, политикой конфиденциальности] и #[a(href="##") пользовательским соглашением]
+    +footer

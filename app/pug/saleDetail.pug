@@ -1,0 +1,100 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+include layouts/components/interestingProduct.pug
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    a(href="##").breadcrumb__item Акции
+                    .breadcrumb__item Акция: 1+1
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                h2 Акция: 1+1
+                //- .page-title__count 233 #[span товара]
+        .container
+            .sale-detail
+                .sale-card.mb-32
+                    .sale-card__time
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#clock")
+                        span 18 д : 18 ч : 18 м
+                    .sale-card__container
+                        img(src="/assets/images/sale-detail.png" alt="Sal")
+                .h4.mb-20 Товар за 1 рубль при первом заказе!
+                .p.mb-32 Получите товар за 1 рубль в подарок при оформлении своего первого заказа. Список подарков будет доступен в Вашей корзине.
+                .h4.mb-20 Как получить:
+                .p • Зарегистрируйтесь или авторизуйтесь на сайте agrokomplexshop.ru
+                .p • Соберите корзину на сумму от 1000 рублей
+                .p • Введите промокод в поле для промокодов
+                .p.mb-32 • Добавьте подарок в корзину и оформите заказ
+                .h4.mb-20 Дополнительные условия:
+                .p • Товары за 1 рубль выдаются только зарегистрированным и авторизованным пользователям по промокоду.
+                .p • Акция действует на заказы, оформленные на сайте agrokomplexshop.ru.
+                .p • Акция не распространяется на магазины торгово-розничной сети и на заказы, оформленные через сторонние агрегаторы доставки.
+                .p • Период проведения акции: с 21 ноября по 31 декабря 2023 года включительно.
+                .p • Акция не суммируется с другими персональными предложениями и промокодами.
+                .p • Количество акционных товаров ограничено.
+                .p • Организатор акции оставляет за собой право её досрочного завершения.
+                .p.mb-32 • Условия проведения акции могут быть изменены организатором без предварительного уведомления в одностороннем порядке.
+                .sale-detail__info.p.mb-32 Акция не является публичной офертой. Организатор акции: АО фирма «Агрокомплекс» им. Н.И. Ткачева, Краснодарский край, ст. Выселки, ул. Степная, 1. ИНН 2328000083 ОГРН 1022303554635
+        +interestingProduct
+        .cards-swiper
+            .container
+                .h2 Другие акции
+                .cards-swiper__container
+                    button(type="button").js-cards-swiper-next.array-slider.array-slider--white.array-slider--next
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                    button(type="button").js-cards-swiper-prev.array-slider.array-slider--white.array-slider--prev
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                    .js-cards-swiper.swiper
+                        .swiper-wrapper
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+        +footer

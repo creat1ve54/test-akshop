@@ -1,0 +1,153 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    .breadcrumb__item Программа лояльности
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                h2 Программа лояльности
+                //- .page-title__count 233 #[span товара]
+        .container
+            .section.mb-32
+                .section__left
+                    .link-section
+                        //- .link-section__container
+                        //-     .link-section__img
+                        //-         img(src="/assets/images/milk-catalog.png" alt="Milk Catalog")
+                        //-     .link-section__info
+                        //-         .link-section__info-title Молоко, сыры, яйцо
+                        //-         .link-section__info-value 154  товара
+                        .link-section__list
+                            a(href="##").link-section__item Преимущества
+                            a(href="##").link-section__item.link-section__item--active Накопление и списание
+                            a(href="##").link-section__item Частые вопросы 
+                            a(href="##").link-section__item Правила использования
+                .section__right
+                    .h4.mb-20 Правила начисления
+                    .p.mb-12 Начисление баллов округляется в меньшую сторону.
+                    .calcualtion__swiper.mb-32
+                        .cards-swiper__container
+                            button(type="button").js-cards-swiper-next.array-slider.array-slider--white.array-slider--next
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                            button(type="button").js-cards-swiper-prev.array-slider.array-slider--white.array-slider--prev
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                            .js-cards-swiper.swiper
+                                .swiper-wrapper
+                                    .swiper-slide.calcualtion__card 
+                                        .calcualtion__card-header
+                                            .calcualtion__card-header-title сумма чека
+                                            .calcualtion__card-header-text до 500 ₽
+                                        div 
+                                            .calcualtion__card-text За каждые #[span 20 ₽]
+                                            .calcualtion__card-text Начисляем #[span 1 балл]
+                                        .calcualtion__card-footer
+                                            .calcualtion__card-footer-title макс. количество баллов
+                                            .calcualtion__card-footer-text 24
+                                    .swiper-slide.calcualtion__card 
+                                        .calcualtion__card-header
+                                            .calcualtion__card-header-title сумма чека
+                                            .calcualtion__card-header-text 500-599,99 ₽
+                                        div 
+                                            .calcualtion__card-text За каждые #[span 18 ₽]
+                                            .calcualtion__card-text Начисляем #[span 1 балл]
+                                        .calcualtion__card-footer
+                                            .calcualtion__card-footer-title макс. количество баллов
+                                            .calcualtion__card-footer-text 33
+                                    .swiper-slide.calcualtion__card 
+                                        .calcualtion__card-header
+                                            .calcualtion__card-header-title сумма чека
+                                            .calcualtion__card-header-text 600-799,99 ₽
+                                        div 
+                                            .calcualtion__card-text За каждые #[span 17 ₽]
+                                            .calcualtion__card-text Начисляем #[span 1 балл]
+                                        .calcualtion__card-footer
+                                            .calcualtion__card-footer-title макс. количество баллов
+                                            .calcualtion__card-footer-text 47
+                                    .swiper-slide.calcualtion__card 
+                                        .calcualtion__card-header
+                                            .calcualtion__card-header-title сумма чека
+                                            .calcualtion__card-header-text 800-999,99 ₽
+                                        div 
+                                            .calcualtion__card-text За каждые #[span 16 ₽]
+                                            .calcualtion__card-text Начисляем #[span 1 балл]
+                                        .calcualtion__card-footer
+                                            .calcualtion__card-footer-title макс. количество баллов
+                                            .calcualtion__card-footer-text 62
+                                    .swiper-slide.calcualtion__card 
+                                        .calcualtion__card-header
+                                            .calcualtion__card-header-title сумма чека
+                                            .calcualtion__card-header-text от 1000 ₽
+                                        div 
+                                            .calcualtion__card-text За каждые #[span 15 ₽]
+                                            .calcualtion__card-text Начисляем #[span 1 балл]
+                                        .calcualtion__card-footer
+                                            .calcualtion__card-footer-title макс. количество баллов
+                                            .calcualtion__card-footer-text от 66 и выше
+                    .h4.mb-20 Срок действия
+                    .p.mb-32 Срок действия баллов - 6 месяцев. Если баллы не были использованы, то они сгорают.
+                    .h4.mb-20 Списание
+                    .p Накопленными баллами можно оплатить до 30% от стоимости покупки.
+        .cards-swiper
+            .container
+                .h2 Наши акции
+                .cards-swiper__container
+                    button(type="button").js-cards-swiper-next.array-slider.array-slider--white.array-slider--next
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                    button(type="button").js-cards-swiper-prev.array-slider.array-slider--white.array-slider--prev
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                    .js-cards-swiper.swiper
+                        .swiper-wrapper
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+        +footer

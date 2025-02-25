@@ -1,0 +1,42 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+//- include layouts/components/geolacetion.pug
+include layouts/components/mainSliders.pug
+include layouts/components/catalog.pug
+include layouts/components/menuMobile.pug
+include layouts/components/deliveryCity.pug
+include layouts/components/interestingProduct.pug
+include layouts/components/stock.pug
+include layouts/components/loyalty.pug
+include layouts/components/news.pug
+include layouts/components/recipes.pug
+include layouts/components/generosity.pug
+include layouts/components/cookie.pug
+
+
+doctype html 
+html(lang='ru')
+  +m-head
+  body
+    +header
+    //- +geolacetion
+    +mainSliders
+    +catalog
+    +interestingProduct
+    .stocks.container
+      .js-stocks.swiper
+        .swiper-wrapper        
+          .swiper-slide 
+            +stock
+          .swiper-slide
+            +stock
+    +catalog
+    +deliveryCity
+    +loyalty
+    +news
+    +recipes
+    +generosity
+    +menuMobile
+    +footer
+    +cookie

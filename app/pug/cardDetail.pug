@@ -1,0 +1,436 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/cardsSwiper.pug
+include layouts/components/interestingProduct.pug
+
+doctype html 
+html(lang='ru')
+  +m-head
+  body
+    +header
+    .breadcrumb
+      .container
+        .breadcrumb__list
+          a(href="##").breadcrumb__item Главная
+          a(href="##").breadcrumb__item Каталог
+          a(href="##").breadcrumb__item Молоко и сыры
+          a(href="##").breadcrumb__item Молочная продукция
+          a(href="##").breadcrumb__item Молоко
+          .breadcrumb__item Молоко 3,2% Агрокомплекс 900мл
+    .card-detail
+      .container
+        .card-detail__container
+          .card-detail__left
+            .card-detail__left-case
+              .swiper.card-detail__swiper-one
+                .badge
+                  .badge__item.badge__item--hit Хит
+                  .badge__item.badge__item--sale -9%
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src="/assets/images/card_img.png" alt="")
+                  .swiper-slide
+                    img(src="/assets/images/card_img.png" alt="")
+                  .swiper-slide
+                    img(src="/assets/images/card_img.png" alt="")
+                  .swiper-slide
+                    img(src="/assets/images/card_img.png" alt="")
+                  .swiper-slide
+                    img(src="/assets/images/card_img.png" alt="")
+                  .swiper-slide
+                    img(src="/assets/images/card_img.png" alt="")
+                .swiper-pagination.card-detail__swiper-pagination
+              .card-detail__swiper-two-container
+                .card-detail__swiper-one-prev
+                .card-detail__swiper-one-next
+                div(thumbsSlider="").swiper.card-detail__swiper-two
+                  .swiper-wrapper
+                    .swiper-slide
+                      img(src="/assets/images/card_img.png" alt="")
+                    .swiper-slide
+                      img(src="/assets/images/card_img.png" alt="")
+                    .swiper-slide
+                      img(src="/assets/images/card_img.png" alt="")
+                    .swiper-slide
+                      img(src="/assets/images/card_img.png" alt="")
+                    .swiper-slide
+                      img(src="/assets/images/card_img.png" alt="")
+                    .swiper-slide
+                      img(src="/assets/images/card_img.png" alt="")
+          .card-detail__right
+            .card-detail__info
+              .card-detail__info-text 1,0 кг
+              .card-detail__info-value Есть в наличии: 14
+            h1.card-detail__title Молоко 3,2%  Агрокомплекс 900мл
+            //- .rating
+            //-   .rating__stars
+            //-     .rating__star.rating__star--active
+            //-       svg
+            //-         use(xlink:href="/assets/icons/sprite.svg#star")
+            //-     .rating__star.rating__star--active
+            //-       svg
+            //-         use(xlink:href="/assets/icons/sprite.svg#star")
+            //-     .rating__star.rating__star--active
+            //-       svg
+            //-         use(xlink:href="/assets/icons/sprite.svg#star")
+            //-     .rating__star.rating__star--active
+            //-       svg
+            //-         use(xlink:href="/assets/icons/sprite.svg#star")
+            //-     .rating__star
+            //-       svg
+            //-         use(xlink:href="/assets/icons/sprite.svg#star")
+            //-   .rating__evaluations 24 оценки
+            //-   .rating__reviews
+            //-     svg
+            //-       use(xlink:href="/assets/icons/sprite.svg#reviews")
+            //-     //- img(src="/assets/images/reviews.svg" alt="Reviews")
+            //-     |12 отзывов
+            .card-detail__prices
+              .card-detail__prices-case
+                .card-detail__prices-container
+                  .card-detail__price-new 63,90 ₽ / шт
+                  .card-detail__price-old 69,99₽
+                  button(type="button").card-detail__price-info
+                .card-detail__prices-btns
+                  .change-basket
+                    button(type="button").card-detail__prices-btn.card-detail__prices-btn--desctop.btn.btn--green
+                      .btn__container
+                        svg
+                          use(xlink:href="/assets/icons/sprite.svg#cardCart")
+                        | В корзину
+                    .counter
+                      button(type="button").btn.btn--green.counter__btn.counter__btn--minus 
+                      .counter__info
+                          .counter__info-value 100 кг
+                          .counter__info-description 13499.00 ₽
+                      button(type="button").btn.btn--green.counter__btn.counter__btn--plus
+                  //- button(type="button").card-detail__prices-btn.card-detail__prices-btn--desctop.btn.btn--green
+                  //-   .btn__container
+                  //-     svg
+                  //-       use(xlink:href="/assets/icons/sprite.svg#cardCart")
+                  //-     | В корзину
+                  button(type="button").card-detail__prices-like
+                    .card-detail__prices-like-container
+                      svg
+                        use(xlink:href="/assets/icons/sprite.svg#heart")
+
+            .card-detail__nutritional-value
+              h4 Пищевая ценность на 100 г
+              .card-detail__nutritional-value-items
+                .card-detail__nutritional-value-item
+                  .card-detail__nutritional-value-item-title 4,7
+                  .card-detail__nutritional-value-item-text углеводы
+                .card-detail__nutritional-value-item
+                  .card-detail__nutritional-value-item-title 59,6
+                  .card-detail__nutritional-value-item-text ккал
+                .card-detail__nutritional-value-item
+                  .card-detail__nutritional-value-item-title 3,4
+                  .card-detail__nutritional-value-item-text белки
+                .card-detail__nutritional-value-item
+                  .card-detail__nutritional-value-item-title 3,2
+                  .card-detail__nutritional-value-item-text жиры
+            .card-detail__switch-content
+              .card-detail__description
+                .page-title
+                  h2 Описание
+                .card-detail__switch-content-main
+                  .card-detail__switch-content-main-info
+                    p.card-detail__switch-content-main-info-text Молоко Простоквашино - вкусный, натуральный и полезный продукт для здорового питания. В агрокомплексе мы любим МОЛОКО! Поэтому считаем, что оно должно быть только ПЯТИЗВЁЗДОЧНОГО КАЧЕСТВА и никак иначе. И мы делаем всё, чтобы такое вкусное и качественное молоко было у вас. 1. Ежедневно заботимся о здоровье коров и чистоте коровников 2. Кормим коров только натуральными кормами 3. Проводим 65 проверок качества для нашего молока 4. Перевозим и храним молоко в правильных условиях 5. Бережно сохраняем вкус и пользу молока Молоко Простоквашино отлично дополнит ваш завтрак, его можно добавить в кофе или чай или выпить на ночь. Кроме того, оно отлично подойдет для готовки блинчиков, каш и множества других любимых домашних блюд. Пейте Молоко Простоквашино с удовольствием!
+                    button(type='button').card-detail__switch-content-main-info-btn
+                      | Читать полностью
+                      svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+              .card-detail__specifications
+                .page-title
+                  h2 Характеристики
+                .card-detail__specifications-container
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Бренд
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text Агрокомплекс Выселковский
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Производитель
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text АО фирма "Агрокомплекс" им. Н.И. Ткачева
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Страна
+                    .card-detail__specifications-item-empty 
+                    .card-detail__specifications-item-text Россия
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Состав
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text Натуральное свежее молоко, вырабатываемое по ГОСТ
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Условия хранения
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text При температуре от 0°C до +4°C
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Срок годности
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text 9
+                  //- .card-detail__switch-content-main-title
+                  //-   .card-detail__switch-content-main-caption Условия хранения
+                  //-   p.card-detail__switch-content-main-description При температуре от 0°C до +4°C
+                  //- .card-detail__switch-content-main-title
+                  //-   .card-detail__switch-content-main-caption Состав
+                  //-   p.card-detail__switch-content-main-description молоко нормализованное пастеризованное
+            //- .card-detail__switch-content
+              .card-detail__specifications
+                .page-title
+                  h2 Характеристики
+                .card-detail__specifications-container
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Бренд
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text Агрокомплекс Выселковский
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Производитель
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text АО фирма "Агрокомплекс" им. Н.И. Ткачева
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Страна
+                    .card-detail__specifications-item-empty 
+                    .card-detail__specifications-item-text Россия
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Состав
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text Натуральное свежее молоко, вырабатываемое по ГОСТ
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Условия хранения
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text При температуре от 0°C до +4°C
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Срок годности
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text 9
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Ккал
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text 59,6
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Жиры
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text 3,2
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Белки
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text 3,2
+                  .card-detail__specifications-item
+                    .card-detail__specifications-item-title Углеводы
+                    .card-detail__specifications-item-empty
+                    .card-detail__specifications-item-text 4,7
+            //- .card-detail__switch-content
+              .card-detail__reviews
+                .card-detail__switch-content-left
+                  .page-title
+                    h2 Отзывы
+                    .page-title__count 12 #[span отзывов]
+                  .feedback 
+                    .feedback__header
+                      .feedback__info
+                        .feedback__info-title Анна М.
+                        .feedback__info-text 25 мая 2023
+                      .feedback__rating
+                        .rating
+                          .rating__stars
+                            .rating__star.rating__star--active
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                            .rating__star.rating__star--active
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                            .rating__star.rating__star--active
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                            .rating__star.rating__star--active
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                            .rating__star
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                    .feedback__main
+                      .feedback__title Комментарий    
+                      .feedback__description Я попробовала ультрапастеризованное молоко «Агрокомплекс» с жирностью 3,2% в упаковке 900 грамм, и я должна сказать, что это одно из лучших, которое я пробовала. Вкус молока насыщенный и кремовый, с лёгкой сладостью и приятным послевкусием. Оно не имеет никакого неприятного привкуса или запаха, который может иногда появляться у другого молока.        
+                  .feedback 
+                    .feedback__header
+                      .feedback__info
+                        .feedback__info-title Анна М.
+                        .feedback__info-text 25 мая 2023
+                      .feedback__rating
+                        .rating
+                          .rating__stars
+                            .rating__star.rating__star--active
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                            .rating__star.rating__star--active
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                            .rating__star.rating__star--active
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                            .rating__star.rating__star--active
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                            .rating__star
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                    .feedback__main
+                      .feedback__title Комментарий    
+                      .feedback__description Я попробовала ультрапастеризованное молоко «Агрокомплекс» с жирностью 3,2% в упаковке 900 грамм, и я должна сказать, что это одно из лучших, которое я пробовала. Вкус молока насыщенный и кремовый, с лёгкой сладостью и приятным послевкусием. Оно не имеет никакого неприятного привкуса или запаха, который может иногда появляться у другого молока.        
+                  .feedback 
+                    .feedback__header
+                      .feedback__info
+                        .feedback__info-title Анна М.
+                        .feedback__info-text 25 мая 2023
+                      .feedback__rating
+                        .rating
+                          .rating__stars
+                            .rating__star.rating__star--active
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                            .rating__star.rating__star--active
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                            .rating__star.rating__star--active
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                            .rating__star.rating__star--active
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                            .rating__star
+                              svg
+                                use(xlink:href="/assets/icons/sprite.svg#star")
+                    .feedback__main
+                      .feedback__title Комментарий    
+                      .feedback__description Я попробовала ультрапастеризованное молоко «Агрокомплекс» с жирностью 3,2% в упаковке 900 грамм, и я должна сказать, что это одно из лучших, которое я пробовала. Вкус молока насыщенный и кремовый, с лёгкой сладостью и приятным послевкусием. Оно не имеет никакого неприятного привкуса или запаха, который может иногда появляться у другого молока.        
+                .card-detail__switch-content-right
+                  .card-detail__feedback-header
+                    .card-detail__feedback-header-up
+                      .card-detail__feedback-header-title Оценка 5.0
+                      .rating
+                        .rating__stars
+                          .rating__star.rating__star-big.rating__star--active
+                            svg
+                              use(xlink:href="/assets/icons/sprite.svg#star")
+                    .card-detail__feedback-header-text На основе 12 отзывов
+                  .card-detail__feedback
+                    .rating
+                      .rating__stars
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                      .rating__reviews.rating__reviews--normal 6 отзывов
+                    .rating
+                      .rating__stars
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                      .rating__reviews.rating__reviews--normal 6 отзывов
+                    .rating
+                      .rating__stars
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                      .rating__reviews.rating__reviews--normal 6 отзывов
+                    .rating
+                      .rating__stars
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                      .rating__reviews.rating__reviews--normal 6 отзывов
+                    .rating
+                      .rating__stars
+                        .rating__star.rating__star-small.rating__star--active
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                        .rating__star.rating__star-small
+                          svg
+                            use(xlink:href="/assets/icons/sprite.svg#star")
+                      .rating__reviews.rating__reviews--normal 6 отзывов
+                  .card-detail__feedback-btn.btn.btn--green Оставить отзыв
+              .pagination
+                button(type="button").pagination__item.pagination__item--active 1
+                button(type="button").pagination__item 2
+                button(type="button").pagination__item 3
+                button(type="button").pagination__next
+        //- .card-detail__switch
+          .switch-btn
+            label.switch-btn__item
+              input(type="radio" name="switchBtn" checked)
+              span.switch-btn__text О товаре
+            label.switch-btn__item
+              input(type="radio" name="switchBtn")
+              span.switch-btn__text Характеристики
+            label.switch-btn__item
+              input(type="radio" name="switchBtn")
+              span.switch-btn__text Отзывы          
+    //- +catalogSwiper
+    .cards-swiper
+      .container
+        .h2.cards-swiper__head Новинки
+        +cardsSwiper
+    +interestingProduct
+    .cards-swiper
+      .container
+        .h2.cards-swiper__head Ранее вы смотрели
+        +cardsSwiper
+    //- +catalogSwiper 
+    +footer

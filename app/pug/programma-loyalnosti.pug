@@ -1,0 +1,143 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    .breadcrumb__item Программа лояльности
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                h2 Программа лояльности
+                //- .page-title__count 233 #[span товара]
+        .container
+            .section.mb-32
+                .section__left
+                    .link-section
+                        //- .link-section__container
+                        //-     .link-section__img
+                        //-         img(src="/assets/images/milk-catalog.png" alt="Milk Catalog")
+                        //-     .link-section__info
+                        //-         .link-section__info-title Молоко, сыры, яйцо
+                        //-         .link-section__info-value 154  товара
+                        .link-section__list
+                            a(href="##").link-section__item.link-section__item--active Преимущества
+                            a(href="##").link-section__item Накопление и списание
+                            a(href="##").link-section__item Частые вопросы 
+                            a(href="##").link-section__item Правила использования
+                .section__right
+                    .h4 Зарегистрируйтесь в программе лояльности
+                    .advantages__container
+                        .advantages__left
+                            ul.loyalty__items
+                                li.loyalty__item
+                                    .loyalty__item-img
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#wallet")
+                                    .loyalty__item-text Накапливайте бонусы и оплачивайте ими до 30% стоимости покупок
+                                li.loyalty__item
+                                    .loyalty__item-img
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#gift")
+                                    .loyalty__item-text Получайте промо-коды, подарки и специальные предложения
+                                li.loyalty__item
+                                    .loyalty__item-img
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#percent")
+                                    .loyalty__item-text Больше скидок для участников бонусной программы
+                            .btn.btn--green.btn--green-white Зарегистрироваться
+                        .advantages__right
+                            img(src="/assets/images/loyality.png", alt="loyality")
+                    ul.advantages__cards
+                        li.advantages__card
+                            .advantages__card-img
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#advantages-1")
+                            .advantages__card-title ДО #[span 30%]
+                            .advantages__card-text оплата накопленными #[br] баллами
+                        li.advantages__card
+                            .advantages__card-img
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#advantages-2")
+                            .advantages__card-title.advantages__card-title--uppercase ВЫГОДА
+                            .advantages__card-text со специальными предложениями
+                        li.advantages__card
+                            .advantages__card-img
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#advantages-3")
+                            .advantages__card-title БОЛЬШЕ СКИДОК
+                            .advantages__card-text с нашей бонусной #[br] картой
+                        li.advantages__card
+                            .advantages__card-img
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#advantages-4")
+                            .advantages__card-texts
+                                .advantages__card-title
+                                    |10
+                                    .advantages__card-text баллов
+                                .advantages__card-title =
+                                .advantages__card-title
+                                    |1
+                                    .advantages__card-text рубль
+                    .advantages__info
+                        .p *Промо-коды выдаются на кассе при совершении покупки, если выполнены условия предоставления промо-предложения.
+                        .p **Карта даёт своему обладателю различные привилегии, как например, информирование о проходящих акциях или дополнительные скидки на товар.
+        .cards-swiper
+            .container
+                .h2 Наши акции
+                .cards-swiper__container
+                    button(type="button").js-cards-swiper-next.array-slider.array-slider--white.array-slider--next
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                    button(type="button").js-cards-swiper-prev.array-slider.array-slider--white.array-slider--prev
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                    .js-cards-swiper.swiper
+                        .swiper-wrapper
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+                            .swiper-slide.sale-card
+                                .sale-card__time
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#clock")
+                                    span 18 д : 18 ч : 18 м
+                                a(href="##").sale-card__container
+                                    img(src="/assets/images/sale.png" alt="Sal")
+        +footer

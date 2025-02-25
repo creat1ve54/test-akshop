@@ -1,0 +1,30 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    .breadcrumb__item 404
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                .page-title__case
+                    .page-title__container
+                        h1 Страница не найдена!
+        .not-found
+            .container
+                .not-found__container
+                    img(src="/assets/images/not-found.svg" alt="Not found")
+                    a(href='/').btn.btn--green.btn--green-white Перейти на главную
+        +footer

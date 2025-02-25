@@ -1,0 +1,196 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    a(href="##").breadcrumb__item Личный кабинет
+                    .breadcrumb__item Мои заказы
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                .page-title__case
+                    .page-title__container
+                        h1 Моя учётная запись
+        .container
+            .section
+                .section__left
+                    .link-section
+                        .link-section__list
+                            a(href="##").link-section__item Мой кабинет
+                            a(href="##").link-section__item Моя учетная запись
+                            a(href="##").link-section__item Мои финансы
+                            a(href="##").link-section__item.link-section__item--active Мои заказы
+                .section__right
+                    +filter
+                    ul.order-history__cards
+                        li.order-history__card
+                            .order-history__card-header
+                                .order-history__card-header-left
+                                    .order-history__card-title Заказ №89905409
+                                    .order-history__card-text Доставка курьером
+                                .order-history__card-header-right
+                                    .order-status.order-status--waiting Ожидает обработки
+                            .order-history__card-description 1900 ₽, 4 товара, 3.2 кг
+                            .order-history__card-items.swiper
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                button(type="button").js-cards-swiper-next.array-slider.array-slider--white.array-slider--next
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                                button(type="button").js-cards-swiper-prev.array-slider.array-slider--white.array-slider--prev
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                            .order-history__card-footer
+                                .order-history__card-text 17 декабря 2023
+                                .order-history__card-btns
+                                    button.order-history__card-btn 
+                                        |Повторить
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#repeat")
+                                    button.order-history__card-btn 
+                                        |Подробнее о заказе
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                                    button.order-history__card-btn.order-history__card-btn--more
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#more")
+                        li.order-history__card
+                            .order-history__card-header
+                                .order-history__card-header-left
+                                    .order-history__card-title Заказ №89905409
+                                    .order-history__card-text Доставка курьером
+                                .order-history__card-header-right
+                                    .order-status.order-status--waiting Ожидает обработки
+                            .order-history__card-description 1900 ₽, 4 товара, 3.2 кг
+                            .order-history__card-items.swiper
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                button(type="button").js-cards-swiper-next.array-slider.array-slider--white.array-slider--next
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                                button(type="button").js-cards-swiper-prev.array-slider.array-slider--white.array-slider--prev
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                            .order-history__card-footer
+                                .order-history__card-text 17 декабря 2023
+                                .order-history__card-btns
+                                    button.order-history__card-btn 
+                                        |Повторить
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#repeat")
+                                    button.order-history__card-btn 
+                                        |Подробнее о заказе
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                                    button.order-history__card-btn.order-history__card-btn--more
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#more")
+                        li.order-history__card
+                            .order-history__card-header
+                                .order-history__card-header-left
+                                    .order-history__card-title Заказ №89905409
+                                    .order-history__card-text Доставка курьером
+                                .order-history__card-header-right
+                                    .order-status.order-status--waiting Ожидает обработки
+                            .order-history__card-description 1900 ₽, 4 товара, 3.2 кг
+                            .order-history__card-items.swiper
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                    .swiper-slide
+                                        img(src="/assets/images/card_img.png" alt="Card")
+                                button(type="button").js-cards-swiper-next.array-slider.array-slider--white.array-slider--next
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                                button(type="button").js-cards-swiper-prev.array-slider.array-slider--white.array-slider--prev
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                            .order-history__card-footer
+                                .order-history__card-text 17 декабря 2023
+                                .order-history__card-btns
+                                    button.order-history__card-btn 
+                                        |Повторить
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#repeat")
+                                    button.order-history__card-btn 
+                                        |Подробнее о заказе
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                                    button.order-history__card-btn.order-history__card-btn--more
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#more")
+                    .btn.btn--gray-light Показать еще
+                    .pagination
+                        a(href="##").pagination__prev
+                        a(href="##").pagination__item.pagination__item--active 1
+                        a(href="##").pagination__item 2
+                        a(href="##").pagination__item 3
+                        a(href="##").pagination__next
+        +footer

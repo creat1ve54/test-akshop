@@ -1,0 +1,148 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/cardsSwiper.pug
+include layouts/components/interestingProduct.pug
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .breadcrumb
+            .container
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    a(href="##").breadcrumb__item Новости
+                    .breadcrumb__item Новость: «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+        .card-detail.card-detail--news
+            .container
+                .h2.card-detail__title.mb-32 «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                .card-detail__container
+                    .card-detail__left
+                        .card-detail__left-case
+                            .swiper.card-detail__swiper-one
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src="/assets/images/news.png" alt="")
+                                    .swiper-slide
+                                        img(src="/assets/images/news.png" alt="")
+                                    .swiper-slide
+                                        img(src="/assets/images/news.png" alt="")
+                                    .swiper-slide
+                                        img(src="/assets/images/news.png" alt="")
+                                    .swiper-slide
+                                        img(src="/assets/images/news.png" alt="")
+                                    .swiper-slide
+                                        img(src="/assets/images/news.png" alt="")
+                                .swiper-pagination.card-detail__swiper-pagination
+                            .card-detail__swiper-two-container
+                                .card-detail__swiper-one-prev
+                                .card-detail__swiper-one-next
+                                div(thumbsSlider="").swiper.card-detail__swiper-two
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            img(src="/assets/images/news.png" alt="")
+                                        .swiper-slide
+                                            img(src="/assets/images/news.png" alt="")
+                                        .swiper-slide
+                                            img(src="/assets/images/news.png" alt="")
+                                        .swiper-slide
+                                            img(src="/assets/images/news.png" alt="")
+                                        .swiper-slide
+                                            img(src="/assets/images/news.png" alt="")
+                                        .swiper-slide
+                                            img(src="/assets/images/news.png" alt="")
+                    .card-detail__right
+                        .card-detail__info
+                            div.card-detail__info-case
+                                span.card-detail__info-text 12 января 2023
+                                span.card-detail__info-value 
+                                    svg
+                                       use(xlink:href="/assets/icons/sprite.svg#eye")
+                                    | 101
+                            button.card-detail__info-btn
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#share")
+                        ul.card-detail__list
+                            li.card-detail__item.p • Товары за 1 рубль выдаются только зарегистрированным и авторизованным пользователям по промокоду.
+                            li.card-detail__item.p • Акция действует на заказы, оформленные на сайте agrokomplexshop.ru.
+                            li.card-detail__item.p • Акция не распространяется на магазины торгово-розничной сети и на заказы, оформленные через сторонние агрегаторы доставки.
+                            li.card-detail__item.p • Период проведения акции: с 21 ноября по 31 декабря 2023 года включительно.
+                            li.card-detail__item.p • Акция не суммируется с другими персональными предложениями и промокодами.
+                            li.card-detail__item.p • Количество акционных товаров ограничено.
+                            li.card-detail__item.p • Организатор акции оставляет за собой право её досрочного завершения.
+                            li.card-detail__item.p • Условия проведения акции могут быть изменены организатором без предварительного уведомления в одностороннем порядке.
+        .cards-swiper.news-detail__swiper
+            .container
+                .h2.cards-swiper__head Другие рецепты
+                .cards-swiper__container
+                    button(type="button").js-cards-swiper-next.array-slider.array-slider--white.array-slider--next
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                    button(type="button").js-cards-swiper-prev.array-slider.array-slider--white.array-slider--prev
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                    .js-cards-swiper.swiper
+                        .swiper-wrapper
+                            .swiper-slide.card-content
+                                .card-content__img 
+                                    img(src="/assets/images/news.png" alt="News")
+                                .card-content__info
+                                    .card-content__text 12 января 2023
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#eye") 
+                                        | 101
+                                .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                            .swiper-slide.card-content
+                                .card-content__img 
+                                    img(src="/assets/images/news.png" alt="News")
+                                .card-content__info
+                                    .card-content__text 12 января 2023
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#eye") 
+                                        | 101
+                                .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                            .swiper-slide.card-content
+                                .card-content__img 
+                                    img(src="/assets/images/news.png" alt="News")
+                                .card-content__info
+                                    .card-content__text 12 января 2023
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#eye") 
+                                        | 101
+                                .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                            .swiper-slide.card-content
+                                .card-content__img 
+                                    img(src="/assets/images/news.png" alt="News")
+                                .card-content__info
+                                    .card-content__text 12 января 2023
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#eye") 
+                                        | 101
+                                .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                            .swiper-slide.card-content
+                                .card-content__img 
+                                    img(src="/assets/images/news.png" alt="News")
+                                .card-content__info
+                                    .card-content__text 12 января 2023
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#eye") 
+                                        | 101
+                                .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+                            .swiper-slide.card-content
+                                .card-content__img 
+                                    img(src="/assets/images/news.png" alt="News")
+                                .card-content__info
+                                    .card-content__text 12 января 2023
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#eye") 
+                                        | 101
+                                .card-content__description «Агрокомплекс Выселковский» предлагает новые премиальные колбасы.
+        +footer

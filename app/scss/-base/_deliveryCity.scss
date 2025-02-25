@@ -1,0 +1,146 @@
+.delivery-city {
+  margin-bottom: 60px;
+
+  .h2 {
+    span {
+      color: $primary2Contrast;
+    }
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    column-gap: 47px;
+    border-radius: 20px;
+    background: rgba($gray1, 0.03);
+    overflow: hidden;
+  }
+
+  &__items {
+    margin-top: 40px;
+    margin-bottom: 48px;
+    display: grid;
+    width: fit-content;
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: column;
+    row-gap: 16px;
+    column-gap: 40px;
+  }
+
+  &__left {
+    flex: 0 0 auto;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    width: 593px;
+    height: 575px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__item {
+    color: var(--Gray, #65676e);
+    font-family: Circe;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 25.2px */
+  }
+
+  .btn {
+    width: 112px;
+  }
+
+  @media screen and (max-width: $laptop) {
+    &__right {
+      width: 50%;
+      height: 405px;
+    }
+  }
+
+  @media screen and (max-width: $table) {
+    &__item {
+      font-size: 14px;
+    }
+
+    &__items {
+      row-gap: 16px;
+      column-gap: 16px;
+      margin: 20px 0px;
+    }
+
+    &__left {
+      padding: 20px;
+    }
+
+    &__right {
+      height: 305px;
+    }
+
+    .btn {
+      background-color: inherit;
+      color: $primary2Contrast;
+      width: fit-content;
+
+      &__arrow {
+        background-color: rgba(255, 255, 255, 0.7);
+        filter: drop-shadow(3px 0px 15px rgba(117, 117, 117, 0.05));
+
+        svg {
+          fill: $primary2Contrast;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    margin-bottom: 24px;
+    &__container {
+      height: vw(245px, $smallMobile);
+    }
+
+    &__right {
+      position: absolute;
+      top: vw(-81px, $smallMobile);
+      right: vw(-92px, $smallMobile);
+      width: vw(236px, $smallMobile);
+      height: vw(220px, $smallMobile);
+    }
+
+    &__left {
+      padding: vw(20px, $smallMobile);
+    }
+
+    &__item {
+      font-size: vw(10px, $smallMobile);
+    }
+
+    &__items {
+      margin: vw(16px, $smallMobile) 0px vw(20px, $smallMobile) 0px;
+      column-gap: vw(8px, $smallMobile);
+      row-gap: vw(6px, $smallMobile);
+    }
+
+    .h2 {
+      max-width: vw(155px, $smallMobile);
+    }
+
+    .btn {
+      font-size: vw(14px, $smallMobile);
+
+      &__arrow {
+        width: vw(14px, $smallMobile);
+        height: vw(14px, $smallMobile);
+      }
+    }
+  }
+}

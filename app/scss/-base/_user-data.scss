@@ -1,0 +1,83 @@
+.user-data {
+  .btn {
+    width: auto;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 575px;
+    margin-bottom: 20px;
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: $primary;
+    }
+  }
+
+  .field {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    // flex-wrap: wrap;
+
+    .custom-input {
+      max-width: 575px;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+  }
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 575px;
+    margin-bottom: 20px;
+    .btn {
+      padding: 12px 20px;
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    &__header {
+      max-width: 400px;
+    }
+
+    .field {
+      .custom-input {
+        max-width: 400px;
+      }
+    }
+
+    &__btns {
+      max-width: 400px;
+    }
+  }
+
+  @media screen and (max-width: $table) {
+    &__header {
+      max-width: none;
+    }
+
+    .field {
+      flex-direction: column;
+      align-items: flex-start;
+      .custom-input {
+        max-width: none;
+      }
+    }
+
+    &__btns {
+      max-width: none;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .field {
+      &__info {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,430 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .order
+            .container
+                .js-fixed.order__fixed
+                    .order__fixed-left
+                        .order__fixed-title Бесплатная доставка с 12:00 до 14:00 
+                        .order__fixed-text Краснодар, улица Рашпилевская, 22
+                    .order__fixed-right
+                        .btn.btn--green.btn--green-white
+                            div Оформить заказ
+                            div   3 674 ₽
+                h1 Оформление заказа
+                .section
+                    .section__left
+                        .order__addressee
+                            .h2 Получатель
+                            .custom-input
+                                .custom-input__container
+                                    input(type="text").custom-input__text
+                                    label.custom-input__placeholder Имя
+                            .custom-input
+                                .custom-input__container    
+                                    input(type="text").custom-input__text
+                                    label.custom-input__placeholder Номер телефона
+                            .custom-input
+                                .custom-input__container
+                                    input(type="text").custom-input__text
+                                    label.custom-input__placeholder E-mail
+
+                            .h3.mb-12 Иван Иванов
+                            div.mb-12
+                                a(href="tel:+79655688585").account__link
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#phone")
+                                    |+7 (965) 568-85-85
+                            div.mb-20
+                                a(href="mailto:post-meta@mail.ru").account__link
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#mail")
+                                    |post-meta@mail.ru
+                        .order__payment 
+                            .h2 Способ оплаты
+                            .custom-radio
+                                label.custom-radio__label 
+                                    input(type="radio" name="changeCard" value="" checked)
+                                    span.custom-radio__label-info.custom-radio__label-info--visa
+                                        //- svg
+                                        //-     use(xlink:href="/assets/icons/sprite.svg#visa")
+                                        span VISA ···· 9999
+                                    span.custom-radio__btn
+                                label.custom-radio__label
+                                    input(type="radio" name="changeCard" value="")
+                                    span.custom-radio__label-info.custom-radio__label-info--master-card
+                                        //- svg
+                                        //-     use(xlink:href="/assets/icons/sprite.svg#masterCard")
+                                        span MasterCard ···· 9999
+                                    span.custom-radio__btn
+                                label.custom-radio__label
+                                    input(type="radio" name="changeCard" value="")
+                                    span.custom-radio__label-info.custom-radio__label-info--link
+                                        //- svg
+                                        //-     use(xlink:href="/assets/icons/sprite.svg#phonePay")
+                                        span Оплатить по ссылке
+                                    span.custom-radio__btn
+                                button(type="button").custom-radio__label
+                                    span.custom-radio__label-info.custom-radio__label-info--add
+                                        //- svg
+                                        //-     use(xlink:href="/assets/icons/sprite.svg#card")
+                                        span Добавить карту
+                                    svg.custom-radio__svg
+                                        use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+                        .order__delivery
+                            .order__delivery-header 
+                                .h2 Доставка курьером
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#edit")
+                            .order__delivery-address Краснодар, ул. Рашпилевская, 22 
+                            .order__delivery-inputs
+                                .custom-input
+                                    .custom-input__container
+                                        input(type="text").custom-input__text
+                                        label.custom-input__placeholder Подъезд
+                                .custom-input
+                                    .custom-input__container
+                                        input(type="text").custom-input__text
+                                        label.custom-input__placeholder Этаж
+                                .custom-input
+                                    .custom-input__container
+                                        input(type="text").custom-input__text
+                                        label.custom-input__placeholder Квартира
+                                .custom-input
+                                    .custom-input__container
+                                        input(type="text").custom-input__text
+                                        label.custom-input__placeholder Домофон
+                            .custom-input.mb-16
+                                .custom-input__container
+                                    input(type="text").custom-input__text
+                                    label.custom-input__placeholder Комментарий курьеру
+                            //- .order__delivery-text Предложение о замене товара
+                            .field.field--select
+                                .custom-input
+                                    .custom-input__container
+                                        input(type="text" required).custom-input__text
+                                        label.custom-input__placeholder Время доставки
+                                        .custom-input__icons-container
+                                            svg
+                                                use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+                                        //- .custom-input__img
+                                        //-     img(src="/assets/images/clear_input.svg" alt="Clear")
+                                        //- .field__error-text Необходимо указать адрес с точностью до номера дома
+                            .field.field--select
+                                .custom-input
+                                    .custom-input__container
+                                        input(type="text" required).custom-input__text
+                                        label.custom-input__placeholder Предложение о замене товара
+                                        .custom-input__icons-container
+                                            svg
+                                                use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+                                        //- .custom-input__img
+                                        //-     img(src="/assets/images/clear_input.svg" alt="Clear")
+                                        //- .field__error-text Необходимо указать адрес с точностью до номера дома
+                                        //- .custom-select.js-select
+                                        //-     .custom-select__header 
+                                        //-         | Заменить на аналогичные по выбору сборщика
+                                        //-         svg
+                                        //-             use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+                                        //-     .custom-select__case
+                                        //-         .custom-select__items
+                                        //-             label.custom-radio__label.custom-select__item 
+                                        //-                 input(type="radio" name="changeProduct" value="" checked)
+                                        //-                 span.custom-radio__btn 
+                                        //-                 span Заменить на аналогичные по мнению сборщика
+                                        //-             label.custom-radio__label.custom-select__item 
+                                        //-                 input(type="radio" name="changeProduct" value="")
+                                        //-                 span.custom-radio__btn 
+                                        //-                 span Позвонить мне. Если не дозвонились, заменить на аналогичный товар
+                                        //-             label.custom-radio__label.custom-select__item 
+                                        //-                 input(type="radio" name="changeProduct" value="")
+                                        //-                 span.custom-radio__btn 
+                                        //-                 span Убрать товар из корзины
+                                        //-         //- .btn.btn--green.custom-select__btn Применить
+                                        //- .order__time-delivery 
+                                        //-     .h2 Время доставки
+                                        //-     .order__swiper
+                                        //-         button(type="button").array-slider.array-slider--white.array-slider--next.js-time-delivery-next
+                                        //-             svg
+                                        //-                 use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                                        //-         button(type="button").array-slider.array-slider--white.array-slider--prev.js-time-delivery-prev
+                                        //-             svg
+                                        //-                 use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                                        //-         .swiper.js-time-delivery
+                                        //-             .swiper-wrapper
+                                        //-                 .swiper-slide.order__time-delivery-slide
+                                        //-                     .order__time-delivery-title сегодня
+                                        //-                     .order__time-delivery-text 9:00-12:00
+                                        //-                 .swiper-slide.order__time-delivery-slide
+                                        //-                     .order__time-delivery-title сегодня
+                                        //-                     .order__time-delivery-text 12:00-14:00
+                                        //-                 .swiper-slide.order__time-delivery-slide
+                                        //-                     .order__time-delivery-title сегодня
+                                        //-                     .order__time-delivery-text 14:00-16:00
+                                        //-                 .swiper-slide.order__time-delivery-slide
+                                        //-                     .order__time-delivery-title сегодня
+                                        //-                     .order__time-delivery-text 16:00-18:00
+                                        //-                 .swiper-slide.order__time-delivery-slide
+                                        //-                     .order__time-delivery-title сегодня
+                                        //-                     .order__time-delivery-text 18:00-20:00
+                                        //-                 .swiper-slide.order__time-delivery-slide
+                                        //-                     .order__time-delivery-title сегодня
+                                        //-                     .order__time-delivery-text 20:00-22:00
+                            .order__promo
+                                .h2 Промокод
+                                .field.field--btn
+                                    .custom-input
+                                        .custom-input__container
+                                            input(type="text" required).custom-input__text
+                                            label.custom-input__placeholder Ввести промокод
+                                            button(type="button").custom-input__icons-container
+                                                svg
+                                                    use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+                                            //- .custom-input__img
+                                            //-     img(src="/assets/images/clear_input.svg" alt="Clear")
+                                            //- .field__error-text Необходимо указать адрес с точностью до номера дома
+                            .order__bonuses
+                                .h2 Бонусная система
+                                .order__bonuses-case
+                                    .order__bonuses-left
+                                        .order__bonuses-title #[span 554] бонусов всего
+                                        .order__bonuses-text 10 бонусов = 1 рубль
+                                    .order__bonuses-right
+
+                                        .custom-input
+                                            .custom-input__container
+                                                input(type="text").custom-input__text
+                                                label.custom-input__placeholder 554
+                                        span будет списано
+                                //- .slide
+                                //-     .js-slide
+                                //-     .slide__container
+                                //-         .slide__number.js-slide__one
+                                //-         .slide__number.js-slide__two
+                            .order__result 
+                                .h2.order__result-title Ваш заказ
+                                .order__result-items
+                                    .order__result-item
+                                        .order__result-item-title Общий вес
+                                        .order__result-item-text 4.45 кг
+                                    .order__result-item
+                                        .order__result-item-title Бонусы
+                                        .order__result-item-text 12 ₽
+                                    .order__result-item
+                                        .order__result-item-title Доставка
+                                        .order__result-item-text бесплатно
+                                    .order__result-item
+                                        .order__result-item-title Скидка
+                                        .order__result-item-text.order__result-item-text--green 50.99 ₽
+                                .order__result-item.order__result-item--gray
+                                    .order__result-item-title.order__result-item-title Без скидки
+                                    .order__result-item-text.order__result-item-text 1112.99 ₽
+                                .order__result-item
+                                    .h2 Итого
+                                    .order__result-item-text.order__result-item-text--result 943,90 ₽ 
+                                .order__result-link Оформляя заказ Вы соглашаетесь #[a с офертой], #[a политикой конфиденциальности] и #[a пользовательским соглашением]
+                                .order__result-btn.btn.btn--green Оформить заказ
+                    .section__right
+                        .order__right
+                            .h2.mb-24 Корзина
+                            .custom-toasts.custom-toasts--warning.mb-16
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#warning")
+                                |Обратите внимание, некоторые товары в корзине недоступны
+                            .order__info.mb-24
+                                .order__info-text.p 5 товаров, 5 кг
+                                button(type="button").order__info-text.p
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#trash")
+                                    | Очистить
+                            //- .switch-btns
+                            //-     label
+                            //-         input(type="radio" name="basket" checked)
+                            //-         span Корзина
+                            //-     label
+                            //-         input(type="radio" name="basket")
+                            //-         span Недоступно (3)
+                            .order__items
+                                .card-basket
+                                    .card-basket__item
+                                        svg.card-basket__item-close
+                                            use(xlink:href="/assets/icons/sprite.svg#closeBurgerMobile")
+                                        .card-basket__item-left
+                                            .card-basket__item-img
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .card-basket__item-right
+                                            .card-basket__item-title Ветчина Шейка традиционная 0,5 кг Агрокомплекс агроагроагроагр оагроагроагроа гроагроагроагроагро агроагроаг
+                                            .card-basket__item-case
+                                                .card-basket__prices
+                                                    .card-basket__price-old 169.99 ₽
+                                                    .card-basket__price-new 134.99 ₽/кг
+                                                .counter
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                    .counter__info
+                                                        .counter__info-value 100 кг
+                                                        .counter__info-description 13499.00 ₽
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--plus  
+                                    .card-basket__item
+                                        svg.card-basket__item-close
+                                            use(xlink:href="/assets/icons/sprite.svg#closeBurgerMobile")
+                                        .card-basket__item-left
+                                            .card-basket__item-img
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .card-basket__item-right
+                                            .card-basket__item-title Ветчина Шейка традиционная 0,5 кг Агрокомплекс 
+                                            .card-basket__item-case
+                                                .card-basket__prices
+                                                    .card-basket__price-old 169.99 ₽
+                                                    .card-basket__price-new 134.99 ₽/кг
+                                                .counter
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                    .counter__info
+                                                        .counter__info-value 100 кг
+                                                        .counter__info-description 13499.00 ₽
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--plus  
+                                    .card-basket__item
+                                        svg.card-basket__item-close
+                                            use(xlink:href="/assets/icons/sprite.svg#closeBurgerMobile")
+                                        .card-basket__item-left
+                                            .card-basket__item-img
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .card-basket__item-right
+                                            .card-basket__item-title Ветчина Шейка традиционная 0,5 кг Агрокомплекс 
+                                            .card-basket__item-case
+                                                .card-basket__prices
+                                                    .card-basket__price-old 169.99 ₽
+                                                    .card-basket__price-new 134.99 ₽/кг
+                                                .counter
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                    .counter__info
+                                                        .counter__info-value 100 кг
+                                                        .counter__info-description 13499.00 ₽
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--plus  
+                                    .card-basket__item
+                                        svg.card-basket__item-close
+                                            use(xlink:href="/assets/icons/sprite.svg#closeBurgerMobile")
+                                        .card-basket__item-left
+                                            .card-basket__item-img
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .card-basket__item-right
+                                            .card-basket__item-title Ветчина Шейка традиционная 0,5 кг Агрокомплекс 
+                                            .card-basket__item-case
+                                                .card-basket__prices
+                                                    .card-basket__price-old 169.99 ₽
+                                                    .card-basket__price-new 134.99 ₽/кг
+                                                .counter
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                    .counter__info
+                                                        .counter__info-value 100 кг
+                                                        .counter__info-description 13499.00 ₽
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--plus  
+                            .order__items-show
+                                button(type="button").order__items-show-left.p
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#trash")
+                                    | Очистить
+                                button(type="button").order__items-show-right.p
+                                    | Показать еще 3 товара
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+                            .order__info.mb-24.mt-24
+                                .order__info-text.p 5 товаров, 5 кг
+                                button(type="button").order__info-text.p
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#trash")
+                                    | Удалить
+                            //- .switch-btns
+                            //-     label
+                            //-         input(type="radio" name="basket" checked)
+                            //-         span Корзина
+                            //-     label
+                            //-         input(type="radio" name="basket")
+                            //-         span Недоступно (3)
+                            .order__items
+                                .card-basket
+                                    .card-basket__item.card-basket__item--disabled
+                                        svg.card-basket__item-close
+                                            use(xlink:href="/assets/icons/sprite.svg#closeBurgerMobile")
+                                        .card-basket__item-left
+                                            .card-basket__item-img
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .card-basket__item-right
+                                            .card-basket__item-title Ветчина Шейка традиционная 0,5 кг Агрокомплекс агроагроагроагр оагроагроагроа гроагроагроагроагро агроагроаг
+                                            .card-basket__item-case
+                                                .card-basket__prices
+                                                    .card-basket__price-old 169.99 ₽
+                                                    .card-basket__price-new 134.99 ₽/кг
+                                                .counter
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                    .counter__info
+                                                        .counter__info-value 100 кг
+                                                        .counter__info-description 13499.00 ₽
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--plus  
+                                    .card-basket__item.card-basket__item--disabled
+                                        svg.card-basket__item-close
+                                            use(xlink:href="/assets/icons/sprite.svg#closeBurgerMobile")
+                                        .card-basket__item-left
+                                            .card-basket__item-img
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .card-basket__item-right
+                                            .card-basket__item-title Ветчина Шейка традиционная 0,5 кг Агрокомплекс 
+                                            .card-basket__item-case
+                                                .card-basket__prices
+                                                    .card-basket__price-old 169.99 ₽
+                                                    .card-basket__price-new 134.99 ₽/кг
+                                                .counter
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                    .counter__info
+                                                        .counter__info-value 100 кг
+                                                        .counter__info-description 13499.00 ₽
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--plus  
+                                    .card-basket__item.card-basket__item--disabled
+                                        svg.card-basket__item-close
+                                            use(xlink:href="/assets/icons/sprite.svg#closeBurgerMobile")
+                                        .card-basket__item-left
+                                            .card-basket__item-img
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .card-basket__item-right
+                                            .card-basket__item-title Ветчина Шейка традиционная 0,5 кг Агрокомплекс 
+                                            .card-basket__item-case
+                                                .card-basket__prices
+                                                    .card-basket__price-old 169.99 ₽
+                                                    .card-basket__price-new 134.99 ₽/кг
+                                                .counter
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                    .counter__info
+                                                        .counter__info-value 100 кг
+                                                        .counter__info-description 13499.00 ₽
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--plus  
+                                    .card-basket__item.card-basket__item--disabled
+                                        svg.card-basket__item-close
+                                            use(xlink:href="/assets/icons/sprite.svg#closeBurgerMobile")
+                                        .card-basket__item-left
+                                            .card-basket__item-img
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .card-basket__item-right
+                                            .card-basket__item-title Ветчина Шейка традиционная 0,5 кг Агрокомплекс 
+                                            .card-basket__item-case
+                                                .card-basket__prices
+                                                    .card-basket__price-old 169.99 ₽
+                                                    .card-basket__price-new 134.99 ₽/кг
+                                                .counter
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                    .counter__info
+                                                        .counter__info-value 100 кг
+                                                        .counter__info-description 13499.00 ₽
+                                                    button(type="button").btn.btn--green.counter__btn.counter__btn--plus  
+        .bascket-clear
+            .bascket-clear__container
+                svg
+                    use(xlink:href="/assets/icons/sprite.svg#basket-clear")
+                .bascket-clear__title В корзине пусто
+                .btn.btn--green.btn--green-white Перейти в каталог
+        +footer

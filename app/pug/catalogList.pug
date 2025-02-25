@@ -1,0 +1,222 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    .breadcrumb__item Каталог
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                .page-title__case
+                    .page-title__container
+                        h1 Молоко
+                        //- .order-status.order-status--waiting Ожидает обработки
+                .page-title__count 233 #[span товара]
+            //- .page-title
+            //-     a(href="##").page-title__back
+            //-         svg
+            //-             use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+            //-     h2 Молоко
+            //-     .page-title__count 233 #[span товара]
+        .catalog-list
+            .container
+                .section
+                    .section__left
+                        .link-section
+                            .link-section__container
+                                .link-section__img
+                                    img(src="/assets/images/milk-catalog.png", alt="Milk Catalog")
+                                .link-section__info
+                                    .link-section__info-title Молоко, сыры, яйцо
+                                    .link-section__info-value 154  товара
+                            .link-section__list
+                                a(href="##").link-section__item 
+                                    svg.link-section__item-arrow
+                                        use(xlink:href="/assets/icons/sprite.svg#arrowBack")
+                                    |Все  товары категории
+                                a(href="##").link-section__item.link-section__item--active Молоко
+                                a(href="##").link-section__item Творожные продукты
+                                a(href="##").link-section__item Йогурты
+                                a(href="##").link-section__item Кисломолочные продукты
+                                a(href="##").link-section__item Сметана и сливки
+                                a(href="##").link-section__item Масло сливочное, маргарин
+                                a(href="##").link-section__item Молочные десерты
+                    .section__right
+                        +filter
+                        .catalog-list__items
+                            .card
+                                .card__up
+                                    .card__up-case
+                                        .card__up-case-icons
+                                            .badge
+                                                .badge__item.badge__item--sale -9%
+                                                .badge__item.badge__item--hit Хит
+                                                .badge__item.badge__item--new Новинка
+                                            button(type="button").card__up-case-icons-like
+                                                svg
+                                                    use(xlink:href="/assets/icons/sprite.svg#heart")
+                                        .card__up-case-img
+                                            img(src="/assets/images/card_img.png" alt="Card")
+                                        .card__up-case-info
+                                            .card__up-case-info-text 1,0 кг
+                                            .card__up-case-info-value В наличии: 14
+                                        .card__up-case-text Кефир выселковский массовой долей жира 1%,пакет 0,9кг Агрокомплекс
+                                .card__down
+                                    .card__down-prices
+                                        .card__down-price-old 169.99 ₽
+                                        .card__down-price-new 134.99 ₽/кг
+                                    .animation-btn
+                                        .change-basket
+                                            button(type="button").btn.btn--green.card__down-btn
+                                            .counter
+                                                button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                .counter__info
+                                                    .counter__info-value 100 кг
+                                                    .counter__info-description 13499.00 ₽
+                                                button(type="button").btn.btn--green.counter__btn.counter__btn--plus
+                            .card
+                                .card__up
+                                    .card__up-case
+                                        .card__up-case-icons
+                                            .badge
+                                                .badge__item.badge__item--sale -9%
+                                                .badge__item.badge__item--hit Хит
+                                                .badge__item.badge__item--new Новинка
+                                            button(type="button").card__up-case-icons-like
+                                                svg
+                                                    use(xlink:href="/assets/icons/sprite.svg#heart")
+                                        .card__up-case-img
+                                            img(src="/assets/images/card_img.png" alt="Card")
+                                        .card__up-case-info
+                                            .card__up-case-info-text 1,0 кг
+                                            .card__up-case-info-value В наличии: 14
+                                        .card__up-case-text Кефир выселковский массовой долей жира 1%,пакет 0,9кг Агрокомплекс
+                                .card__down
+                                    .card__down-prices
+                                        .card__down-price-old 169.99 ₽
+                                        .card__down-price-new 134.99 ₽/кг
+                                    .animation-btn
+                                        .change-basket
+                                            button(type="button").btn.btn--green.card__down-btn
+                                            .counter
+                                                button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                .counter__info
+                                                    .counter__info-value 100 кг
+                                                    .counter__info-description 13499.00 ₽
+                                                button(type="button").btn.btn--green.counter__btn.counter__btn--plus
+                            .card
+                                .card__up
+                                    .card__up-case
+                                        .card__up-case-icons
+                                            .badge
+                                                .badge__item.badge__item--sale -9%
+                                                .badge__item.badge__item--hit Хит
+                                                .badge__item.badge__item--new Новинка
+                                            button(type="button").card__up-case-icons-like
+                                                svg
+                                                    use(xlink:href="/assets/icons/sprite.svg#heart")
+                                        .card__up-case-img
+                                            img(src="/assets/images/card_img.png" alt="Card")
+                                        .card__up-case-info
+                                            .card__up-case-info-text 1,0 кг
+                                            .card__up-case-info-value В наличии: 14
+                                        .card__up-case-text Кефир выселковский массовой долей жира 1%,пакет 0,9кг Агрокомплекс
+                                .card__down
+                                    .card__down-prices
+                                        .card__down-price-old 169.99 ₽
+                                        .card__down-price-new 134.99 ₽/кг
+                                    .animation-btn
+                                        .change-basket
+                                            button(type="button").btn.btn--green.card__down-btn
+                                            .counter
+                                                button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                .counter__info
+                                                    .counter__info-value 100 кг
+                                                    .counter__info-description 13499.00 ₽
+                                                button(type="button").btn.btn--green.counter__btn.counter__btn--plus
+                            .card
+                                .card__up
+                                    .card__up-case
+                                        .card__up-case-icons
+                                            .badge
+                                                .badge__item.badge__item--sale -9%
+                                                .badge__item.badge__item--hit Хит
+                                                .badge__item.badge__item--new Новинка
+                                            button(type="button").card__up-case-icons-like
+                                                svg
+                                                    use(xlink:href="/assets/icons/sprite.svg#heart")
+                                        .card__up-case-img
+                                            img(src="/assets/images/card_img.png" alt="Card")
+                                        .card__up-case-info
+                                            .card__up-case-info-text 1,0 кг
+                                            .card__up-case-info-value В наличии: 14
+                                        .card__up-case-text Кефир выселковский массовой долей жира 1%,пакет 0,9кг Агрокомплекс
+                                .card__down
+                                    .card__down-prices
+                                        .card__down-price-old 169.99 ₽
+                                        .card__down-price-new 134.99 ₽/кг
+                                    .animation-btn
+                                        .change-basket
+                                            button(type="button").btn.btn--green.card__down-btn
+                                            .counter
+                                                button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                .counter__info
+                                                    .counter__info-value 100 кг
+                                                    .counter__info-description 13499.00 ₽
+                                                button(type="button").btn.btn--green.counter__btn.counter__btn--plus
+                            .card
+                                .card__up
+                                    .card__up-case
+                                        .card__up-case-icons
+                                            .badge
+                                                .badge__item.badge__item--sale -9%
+                                                .badge__item.badge__item--hit Хит
+                                                .badge__item.badge__item--new Новинка
+                                            button(type="button").card__up-case-icons-like
+                                                svg
+                                                    use(xlink:href="/assets/icons/sprite.svg#heart")
+                                        .card__up-case-img
+                                            img(src="/assets/images/card_img.png" alt="Card")
+                                        .card__up-case-info
+                                            .card__up-case-info-text 1,0 кг
+                                            .card__up-case-info-value В наличии: 14
+                                        .card__up-case-text Кефир выселковский массовой долей жира 1%,пакет 0,9кг Агрокомплекс
+                                .card__down
+                                    .card__down-prices
+                                        .card__down-price-old 169.99 ₽
+                                        .card__down-price-new 134.99 ₽/кг
+                                    .animation-btn
+                                        .change-basket
+                                            button(type="button").btn.btn--green.card__down-btn
+                                            .counter
+                                                button(type="button").btn.btn--green.counter__btn.counter__btn--minus
+                                                .counter__info
+                                                    .counter__info-value 100 кг
+                                                    .counter__info-description 13499.00 ₽
+                                                button(type="button").btn.btn--green.counter__btn.counter__btn--plus
+
+                        .catalog-list__btn.btn.btn--gray-light Показать еще
+                        .pagination
+                            a(href="##").pagination__prev
+                            a(href="##").pagination__item.pagination__item--active 1
+                            a(href="##").pagination__item 2
+                            a(href="##").pagination__item 3
+                            a(href="##").pagination__next
+                        .catalog-list__texts
+                            h2 Молочные продукты, сыры, яйцо куриное с доставкой по Краснодару
+                            p Молочные продукты, яйца и сыры — важная составляющая рациона взрослых и детей, основа полноценного, действительно здорового питания. Они хороши как сами по себе, так и в составе различных блюд, от салатов до выпечки. У нас вы сможете по доступной цене купить яйцо куриное, творог и творожные изделия, йогурт, сыр, масло сливочное и маргарин, молочные десерты, молоко и напитки на его основе.
+                            p Интернет-магазин предлагает продукцию проверенных, хорошо известных потребителю брендов: el nuar, Scamorza Ciliegine, Fruittella, Hochland, Violette, Mirata, Ne moloko, Агрокомплекс, Айран, Бифилакт «Биота», Дружба, Славна, Карат, Кремлёвское, Хозяюшка, Николаевские сыроварни, Хохланд, Сливочник, Фабрика десертов Славна, Эплик. Производители гарантируют высокое качество и натуральный состав продукции. Так йогурт содержит живые бактерии и пищевые волокна, а сметана изготавливается из закваски и сливок оптимальной жирности.
+        +footer

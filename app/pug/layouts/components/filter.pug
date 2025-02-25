@@ -1,0 +1,31 @@
+mixin filter
+    .filter
+        button(type="button").filter__case
+            .filter__img
+                svg
+                    use(xlink:href="/assets/icons/sprite.svg#filter")
+            .filter__text Фильтры
+        //- .custom-select.js-select
+        //-     .custom-select__header 
+        //-         | Заменить на аналогичные по выбору сборщика
+        //-         svg
+        //-             use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+        //-     .custom-select__case
+        //-         .custom-select__items
+        //-             label.custom-radio__label.custom-select__item 
+        //-                 input(type="radio" name="changeProduct" value="" checked)
+        //-                 span.custom-radio__btn 
+        //-                 span Заменить на аналогичные по мнению сборщика
+        //-             label.custom-radio__label.custom-select__item 
+        //-                 input(type="radio" name="changeProduct" value="")
+        //-                 span.custom-radio__btn 
+        //-                 span Позвонить мне. Если не дозвонились, заменить на аналогичный товар
+        //-             label.custom-radio__label.custom-select__item 
+        //-                 input(type="radio" name="changeProduct" value="")
+        //-                 span.custom-radio__btn 
+        //-                 span Убрать товар из корзины
+        //-         .btn.btn--green.custom-select__btn Применить
+        .custom-selector 
+            .custom-selector__container
+                .custom-selector__text По умолчанию
+                .custom-selector__img

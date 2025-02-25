@@ -1,0 +1,71 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    a(href="##").breadcrumb__item Покупателю
+                    .breadcrumb__item Контакты
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                h2 Контакты
+                //- .page-title__count 233 #[span товара]
+        .container
+            .section
+                .section__left
+                    .link-section
+                        //- .link-section__container
+                        //-     .link-section__img
+                        //-         img(src="/assets/images/milk-catalog.png" alt="Milk Catalog")
+                        //-     .link-section__info
+                        //-         .link-section__info-title Молоко, сыры, яйцо
+                        //-         .link-section__info-value 154  товара
+                        .link-section__list
+                            a(href="##").link-section__item Помощь
+                            a(href="##").link-section__item Документы
+                            a(href="##").link-section__item.link-section__item--active Контакты
+                .section__right
+                    .contacts 
+                        .contacts__left 
+                            .h4.mb-20 Адрес
+                            .p.mb-32 Офис интернет-магазина: Краснодарский крайг.Краснодар, ул. В.Н. Мачуги 76
+                            .h4.mb-20 Телефон
+                            .p.mb-32 8 (800) 250-89-25
+                            .h4.mb-20 Электронная почта
+                            .p.mb-32 info@agrokomplexshop.ru
+                            .social.mb-32
+                                a(href="##").social__item
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#telegram")
+                                a(href="##").social__item
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#vkontakte")
+                            .h4.mb-20 Юридический адрес
+                            .p.mb-12 АО фирма «Агрокомплекс» имени Н. И. Ткачева
+                            .p.mb-12 Россия, 353100, #[br] Краснодарский край, ст. Выселки, ул. Степная, 1
+                            ul.contacts__documents
+                                li.contacts__document.p ИНН 2328000083 
+                                li.contacts__document.p ОГРН 1022303554635 
+                                li.contacts__document.p р/с 40702810030310100107 
+                                li.contacts__document.p КПП 232801001
+                                li.contacts__document.p ОКПО 03553136
+                                li.contacts__document.p к/с 30101810100000000602
+                            .p.mb-32 отделение № 8619 Сбербанка России #[br] г.Краснодар БИК 040349602
+                            button.contacts__btn.btn.btn--green Написать сообщение
+                        .contacts__right 
+                            img(src="/assets/images/contacts-map.png", alt="Contacts map")
+
+        +footer

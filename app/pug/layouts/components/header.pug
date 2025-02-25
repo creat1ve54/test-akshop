@@ -1,0 +1,161 @@
+include ./searchList.pug
+
+mixin header
+    .header
+        .header__up    
+            .container.header__up-container
+                div.header__up-fixed-catalog
+                    .btn-toggle
+                        .btn-toggle__button
+                            svg
+                                use(xlink:href="/assets/icons/sprite.svg#burger")
+                        .btn-toggle__catalog
+                            //- .btn-toggle__catalog-header
+                                button(type="button", data-toggle-back).btn-toggle__catalog-header-case
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                                    .h3 Каталог
+                                button(type="button", data-toggle-close).btn-toggle__catalog-header-close
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#closeBurgerMobile")
+                            //- .btn-toggle__catalog-container
+                    a(href="/").header__up-logo
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#logo")
+                .header__up-logo-mobile
+                    .burger
+                        .burger__btn 
+                            svg.burger__btn-open
+                                use(xlink:href="/assets/icons/sprite.svg#burgerMobile")
+                            svg.burger__btn-close
+                                use(xlink:href="/assets/icons/sprite.svg#closeBurgerMobile")
+                        .burger__modal
+                            .burger__container
+                                .burger__list
+                                    .btn-toggle.btn-toggle--mobile
+                                        .btn-toggle__button
+                                            span.btn-toggle__text Каталог
+                                            svg.btn-toggle__catalog-img
+                                                use(xlink:href="/assets/icons/sprite.svg#caretUp")
+                                        .btn-toggle__catalog
+                                            ul(data-level='1').btn-toggle__catalog-stage
+                                                li.btn-toggle__catalog-stage-text
+                                                    a(href="##").btn-toggle__catalog-text Мясо
+                                                    svg.btn-toggle__catalog-img
+                                                        use(xlink:href="/assets/icons/sprite.svg#caretUp")
+                                                .btn-toggle__catalog-list
+                                                    ul(data-level='2').btn-toggle__catalog-stage
+                                                        li.btn-toggle__catalog-stage-text
+                                                            a(href="##").btn-toggle__catalog-text Мясо2
+                                                            svg.btn-toggle__catalog-img
+                                                                use(xlink:href="/assets/icons/sprite.svg#caretUp")
+                                                        .btn-toggle__catalog-list
+                                                            ul.btn-toggle__catalog-stage
+                                                                li.btn-toggle__catalog-stage-text
+                                                                    a(href="##").btn-toggle__catalog-text Мясо3
+                                                    ul(data-level='2').btn-toggle__catalog-stage
+                                                        li.btn-toggle__catalog-stage-text
+                                                            a(href="##").btn-toggle__catalog-text Мясо2
+                                            ul(data-level='1').btn-toggle__catalog-stage
+                                                li.btn-toggle__catalog-stage-text
+                                                    a(href="##").btn-toggle__catalog-text Молоко
+                                                    svg.btn-toggle__catalog-img
+                                                        use(xlink:href="/assets/icons/sprite.svg#caretUp")
+                                                .btn-toggle__catalog-list
+                                                    ul.btn-toggle__catalog-stage
+                                                        li.btn-toggle__catalog-stage-text
+                                                            a(href="##").btn-toggle__catalog-text Молоко1
+                                            ul(data-level='1').btn-toggle__catalog-stage
+                                                li.btn-toggle__catalog-stage-text
+                                                    a(href="##").btn-toggle__catalog-text Кефир
+                                .burger__links
+                                    .burger__item 
+                                        a(href="##").burger__link Скидки
+                                    .burger__item
+                                        a(href="##").burger__link Хиты
+                                    .burger__item
+                                        a(href="##").burger__link Новинки
+                                    .burger__item 
+                                        a(href="##").burger__link Акции
+                                    .burger__item 
+                                        a(href="##").burger__link Покупателю
+                                    .burger__item 
+                                        a(href="##").burger__link Программа лояльности
+
+                    a(href="/").header__up-logo-mobile-link
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#logoMobile")
+                .search
+                    .search__container
+                        a(href="##").search__back
+                        div.search__case
+                            input(type="text" placeholder="Найти продукты").search__input
+                            svg.search__img
+                                use(xlink:href="/assets/icons/sprite.svg#search")
+                    //- +searchList
+                    .search__overlay
+                .address
+                    .loader
+                    .address__texts
+                        //- .address__delivery Доставка: стандарт
+                        .address__img
+                            svg
+                                use(xlink:href="/assets/icons/sprite.svg#gps")
+                            //- svg
+                            //-     use(xlink:href="/assets/icons/sprite.svg#pin")
+                            //- svg
+                            //-     use(xlink:href="/assets/icons/sprite.svg#delivery")
+                        .address__text Краснодар, ул. Рашпилевскаяd as dasd adasdas
+                    .address__point.hidden
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#geolocation")
+                        span Укажите адрес доставки
+                    .address__arrow
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+                .search-btn
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#search")
+                .navigation
+                    ul.navigation__list
+                        li.navigation__item.navigation__item--auth
+                            .navigation__item-svg 
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#user")
+                            .navigation__item-text Войти
+                        li.navigation__item
+                            .navigation__item-svg 
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#heart")
+                            .navigation__item-text Избранное
+                        li.navigation__item.navigation__item--notification
+                            .navigation__item-svg 
+                                .notification 1
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#cart")
+                            .navigation__item-text Корзина
+        .container.menu
+            .btn-toggle
+                .btn-toggle__button
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#burger")
+                    span.btn-toggle__text Каталог
+                .btn-toggle__catalog
+            .menu__container
+                .menu__items
+                    .swiper.menu__items-swiper
+                        .swiper-wrapper
+                            a(href="##").swiper-slide.menu__items-item.menu__items-item--green 
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#flame")
+                                |Скидки
+                            a(href="##").swiper-slide.menu__items-item.menu__items-item--green Новинки
+                            a(href="##").swiper-slide.menu__items-item.menu__items-item--green Хиты
+                            a(href="##").swiper-slide.menu__items-item.menu__items-item--green Акции
+                            a(href="##").swiper-slide.menu__items-item Доставка и оплата
+                            a(href="##").swiper-slide.menu__items-item Покупателю
+                            a(href="##").swiper-slide.menu__items-item О компании
+                            a(href="##").swiper-slide.menu__items-item Рецепты
+                            a(href="##").swiper-slide.menu__items-item Программа лояльности
+                    .swiper-button-prev.swiper-button.menu__items-swiper-prev
+                    .swiper-button-next.swiper-button.menu__items-swiper-next

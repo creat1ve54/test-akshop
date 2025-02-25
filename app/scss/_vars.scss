@@ -1,0 +1,53 @@
+//brakpoints-width
+$desctop: 1920px;
+$laptop: 1439px;
+$table: 1023px;
+$mobile: 767px;
+$mediumMobile: 576px;
+$smallMobile: 374px;
+
+//font-family
+$ffCirce: 'Circe';
+$ffOpSans: 'Open Sans';
+$ffDefault: 'Arial';
+
+//color
+$white: #ffffff;
+$black: #000000;
+
+$primary: #25472f;
+$primary2: #93c200;
+$primary2Contrast: #5C8000;
+$primary3: #d7e6b8;
+
+$gray1: #333333;
+$gray2: #4f4f4f;
+$gray3: #828282;
+$gray4: #bdbdbd;
+$gray5: #e0e0e0;
+$gray6: #f2f2f2;
+$gray6P: #F5F7F9;
+
+$redFill: #FEDAD5;
+$redTxt: #FF5F47;
+$greenFill: #EAFFDA;
+$greenTxt: #4BA405;
+$yellowFill: #FFF0CA;
+$yellowTxt: #DD9F00;
+
+$sale: #F91F01;
+$hit: #499C61;
+$newSale: #FF9F2E;
+$newLike: #FF7997;
+
+$brown: #8B6B47;
+$yellow: #FFC973;
+
+$errorValid: #FFF0EE;
+
+
+//function
+@function vw($px, $vw) {
+  @return calc(($px * 100vw) / $vw);
+}
+

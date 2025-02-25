@@ -1,0 +1,181 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+include layouts/components/interestingProduct.pug
+
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    a(href="##").breadcrumb__item Личный кабинет
+                    .breadcrumb__item Мои заказы
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                .page-title__case
+                    .page-title__container
+                        h1 Заказ № #[br] 8493839434390
+                        .order-status.order-status--waiting Ожидает обработки
+                    .page-title__bottom.h5 от 15 декабря 2023 
+                //- .page-title__count 233 #[span товара]
+        .container
+            .section.mb-40 
+                .section__left
+                    .link-section
+                        .link-section__list
+                            a(href="##").link-section__item.link-section__item--active Мой кабинет
+                            a(href="##").link-section__item Моя учетная запись
+                            a(href="##").link-section__item Мои финансы
+                            a(href="##").link-section__item Мои заказы
+                            //- a(href="##").link-section__item Мои отзывы
+                            //- a(href="##").link-section__item Мои подписки
+                .section__right
+                    .order-history-detail
+                        .order-history-detail__left
+                            .order-history-detail__info
+                                .order-history-detail__info-case
+                                    .order-history-detail__info-item
+                                        .order-history-detail__info-item-title.order-history-detail__info-item-title--profile
+                                            svg
+                                                use(xlink:href="/assets/icons/sprite.svg#user")
+                                            |Получатель
+                                        ul.order-history-detail__info-item-list
+                                            li.order-history-detail__info-item-text Анастасия Наконечная
+                                            li.order-history-detail__info-item-text post-post@mail.com
+                                            li.order-history-detail__info-item-text +7 912 121 12 12
+                                    .order-history-detail__info-item
+                                        .order-history-detail__info-item-title
+                                            svg
+                                                use(xlink:href="/assets/icons/sprite.svg#delivery")
+                                            |Доставка курьером
+                                        ul.order-history-detail__info-item-list
+                                            li.order-history-detail__info-item-text Россия, 350020, Краснодарский край, г. Краснодар, ул. Бабушкина, 150
+                                            li.order-history-detail__info-item-text 12.12.2023 с 12:00 по 14:00
+                                    .order-history-detail__info-item
+                                        .order-history-detail__info-item-title
+                                            svg
+                                                use(xlink:href="/assets/icons/sprite.svg#settings")
+                                            |Настройки заказа
+                                        ul.order-history-detail__info-item-list
+                                            li.order-history-detail__info-item-text Связаться со мной и предложить замену
+                                button.btn.btn--green.btn--green-white Электронный чек
+                                .order-history-detail__info-bottom
+                                    button.order-history-detail__info-btn
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#repeat")
+                                        |Повторить 
+                                    button.order-history-detail__info-btn Отменить
+                            .order-history-detail__cheque
+                                .order__result 
+                                    .order-history-detail__cheque-header
+                                        .order-history-detail__cheque-title.h3 
+                                            svg
+                                                use(xlink:href="/assets/icons/sprite.svg#card-custom")
+                                            |Оплата картой
+                                        .order-status.order-status--waiting Ожидает обработки
+                                    .order__result-items
+                                        .order__result-item
+                                            .order__result-item-title Общий вес
+                                            .order__result-item-text 4.45 кг
+                                        .order__result-item
+                                            .order__result-item-title Бонусы
+                                            .order__result-item-text 12 ₽
+                                        .order__result-item
+                                            .order__result-item-title Доставка
+                                            .order__result-item-text бесплатно
+                                        .order__result-item
+                                            .order__result-item-title Скидка
+                                            .order__result-item-text.order__result-item-text--green 50.99 ₽
+                                    .order__result-item.order__result-item--gray
+                                        .order__result-item-title.order__result-item-title Без скидки
+                                        .order__result-item-text.order__result-item-text 1112.99 ₽
+                                    .order__result-item
+                                        .h2 Итого
+                                        .order__result-item-text.order__result-item-text--result 943,90 ₽ 
+                        .order-history-detail__right
+                            .h2.mb-24 Состав заказа
+                            .order__info.mb-24
+                                .order__info-text.p 5 товаров, 5 кг
+                            .order__items
+                                .card-basket
+                                    .card-basket__item
+                                        .card-basket__item-left
+                                            .card-basket__item-img
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .card-basket__item-right
+                                            .card-basket__item-title Ветчина Шейка традиционная 0,5 кг Агрокомплекс агроагроагроагр оагроагроагроа гроагроагроагроагро агроагроаг
+                                            .card-basket__item-case
+                                                .card-basket__prices
+                                                    .card-basket__price-old 169.99 ₽
+                                                    .card-basket__price-new 134.99 ₽/кг
+                                                .card-basket__item-info 100 кг · 13499.00 ₽
+                                                
+                                                //- .counter
+                                                //-     button(type="button" disabled).btn.btn--green.counter__btn.counter__btn--minus
+                                                //-     .counter__info
+                                                //-         .counter__info-value 100 кг
+                                                //-         .counter__info-description 13499.00 ₽
+                                                //-     button(type="button" disabled).btn.btn--green.counter__btn.counter__btn--plus  
+                                    .card-basket__item
+                                        .card-basket__item-left
+                                            .card-basket__item-img
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .card-basket__item-right
+                                            .card-basket__item-title Ветчина Шейка традиционная 0,5 кг Агрокомплекс 
+                                            .card-basket__item-case
+                                                .card-basket__prices
+                                                    .card-basket__price-old 169.99 ₽
+                                                    .card-basket__price-new 134.99 ₽/кг
+                                                .card-basket__item-info 100 кг · 13499.00 ₽
+                                                //- .counter
+                                                //-     button(type="button" disabled).btn.btn--green.counter__btn.counter__btn--minus
+                                                //-     .counter__info
+                                                //-         .counter__info-value 100 кг
+                                                //-         .counter__info-description 13499.00 ₽
+                                                //-     button(type="button" disabled).btn.btn--green.counter__btn.counter__btn--plus  
+                                    .card-basket__item
+                                        .card-basket__item-left
+                                            .card-basket__item-img
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .card-basket__item-right
+                                            .card-basket__item-title Ветчина Шейка традиционная 0,5 кг Агрокомплекс 
+                                            .card-basket__item-case
+                                                .card-basket__prices
+                                                    .card-basket__price-old 169.99 ₽
+                                                    .card-basket__price-new 134.99 ₽/кг
+                                                .card-basket__item-info 100 кг · 13499.00 ₽
+                                                //- .counter
+                                                //-     button(type="button" disabled).btn.btn--green.counter__btn.counter__btn--minus
+                                                //-     .counter__info
+                                                //-         .counter__info-value 100 кг
+                                                //-         .counter__info-description 13499.00 ₽
+                                                //-     button(type="button" disabled).btn.btn--green.counter__btn.counter__btn--plus  
+                                    .card-basket__item
+                                        .card-basket__item-left
+                                            .card-basket__item-img
+                                                img(src="/assets/images/card_img.png" alt="Card")
+                                        .card-basket__item-right
+                                            .card-basket__item-title Ветчина Шейка традиционная 0,5 кг Агрокомплекс 
+                                            .card-basket__item-case
+                                                .card-basket__prices
+                                                    .card-basket__price-old 169.99 ₽
+                                                    .card-basket__price-new 134.99 ₽/кг
+                                                .card-basket__item-info 100 кг · 13499.00 ₽
+                                                //- .counter
+                                                //-     button(type="button" disabled).btn.btn--green.counter__btn.counter__btn--minus
+                                                //-     .counter__info
+                                                //-         .counter__info-value 100 кг
+                                                //-         .counter__info-description 13499.00 ₽
+                                                //-     button(type="button" disabled).btn.btn--green.counter__btn.counter__btn--plus  
+        +interestingProduct
+        +footer

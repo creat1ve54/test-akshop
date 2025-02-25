@@ -1,0 +1,241 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/cardsSwiper.pug
+include layouts/components/interestingProduct.pug
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .breadcrumb
+            .container
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    a(href="##").breadcrumb__item Рецепты
+                    .breadcrumb__item Рецепт: Тыквенный суп со сливками, томленным цыплёнком и свежей зеленью соусом 
+        .card-detail.card-detail--news
+            .container
+                .h2.card-detail__title.mb-32 Тыквенный суп со сливками, томленным цыплёнком и свежей зеленью соусом 
+                .card-detail__container
+                    .card-detail__left
+                        .card-detail__left-case
+                            .swiper.card-detail__swiper-one
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src="/assets/images/news.png" alt="")
+                                    .swiper-slide
+                                        img(src="/assets/images/news.png" alt="")
+                                    .swiper-slide
+                                        img(src="/assets/images/news.png" alt="")
+                                    .swiper-slide
+                                        img(src="/assets/images/news.png" alt="")
+                                    .swiper-slide
+                                        img(src="/assets/images/news.png" alt="")
+                                    .swiper-slide
+                                        img(src="/assets/images/news.png" alt="")
+                                .swiper-pagination.card-detail__swiper-pagination
+                            .card-detail__swiper-two-container
+                                .card-detail__swiper-one-prev
+                                .card-detail__swiper-one-next
+                                div(thumbsSlider="").swiper.card-detail__swiper-two
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            img(src="/assets/images/news.png" alt="")
+                                        .swiper-slide
+                                            img(src="/assets/images/news.png" alt="")
+                                        .swiper-slide
+                                            img(src="/assets/images/news.png" alt="")
+                                        .swiper-slide
+                                            img(src="/assets/images/news.png" alt="")
+                                        .swiper-slide
+                                            img(src="/assets/images/news.png" alt="")
+                                        .swiper-slide
+                                            img(src="/assets/images/news.png" alt="")
+                    .card-detail__right
+                        .card-detail__info
+                            div.card-detail__info-case
+                                span.card-detail__info-value 
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#timer")
+                                    | 40 минут
+                                span.card-detail__info-value 
+                                    svg
+                                        use(xlink:href="/assets/icons/sprite.svg#food")
+                                    | 3-4 порции
+                            button.card-detail__info-btn
+                                svg
+                                    use(xlink:href="/assets/icons/sprite.svg#share")
+                        .card-detail__nutritional-value
+                            h4 Пищевая ценность на 100 г
+                            .card-detail__nutritional-value-items
+                                .card-detail__nutritional-value-item
+                                    .card-detail__nutritional-value-item-title 4,7
+                                    .card-detail__nutritional-value-item-text углеводы
+                                .card-detail__nutritional-value-item
+                                    .card-detail__nutritional-value-item-title 59,6
+                                    .card-detail__nutritional-value-item-text ккал
+                                .card-detail__nutritional-value-item
+                                    .card-detail__nutritional-value-item-title 3,4
+                                    .card-detail__nutritional-value-item-text белки
+                                .card-detail__nutritional-value-item
+                                    .card-detail__nutritional-value-item-title 3,2
+                                    .card-detail__nutritional-value-item-text жиры
+                        .card-detail__switch-content
+                            .card-detail__description
+                                .page-title
+                                    h2 Описание
+                                .card-detail__switch-content-main
+                                    .card-detail__switch-content-main-info
+                                        p.card-detail__switch-content-main-info-text Молоко Простоквашино - вкусный, натуральный и полезный продукт для здорового питания. В агрокомплексе мы любим МОЛОКО! Поэтому считаем, что оно должно быть только ПЯТИЗВЁЗДОЧНОГО КАЧЕСТВА и никак иначе. И мы делаем всё, чтобы такое вкусное и качественное молоко было у вас. 1. 
+                                        button(type='button').card-detail__switch-content-main-info-btn
+                                            | Читать полностью
+                                            svg
+                                                use(xlink:href="/assets/icons/sprite.svg#arrowDown")
+                            .card-detail__specifications
+                                .page-title
+                                    h2 Ингредиенты
+                                .card-detail__specifications-container
+                                    .card-detail__specifications-item
+                                        .card-detail__specifications-item-title Картофель
+                                        .card-detail__specifications-item-empty
+                                        .card-detail__specifications-item-text 0.7 кг
+                                    .card-detail__specifications-item
+                                        .card-detail__specifications-item-title Морковь
+                                        .card-detail__specifications-item-empty
+                                        .card-detail__specifications-item-text 0,2 кг
+                                    .card-detail__specifications-item
+                                        .card-detail__specifications-item-title Свекла
+                                        .card-detail__specifications-item-empty 
+                                        .card-detail__specifications-item-text 0,2 кг
+                                    .card-detail__specifications-item
+                                        .card-detail__specifications-item-title Лук
+                                        .card-detail__specifications-item-empty
+                                        .card-detail__specifications-item-text 0,3 кг
+                                    .card-detail__specifications-item
+                                        .card-detail__specifications-item-title Чеснок
+                                        .card-detail__specifications-item-empty
+                                        .card-detail__specifications-item-text 100 г
+                                    .card-detail__specifications-item
+                                        .card-detail__specifications-item-title Томатная паста
+                                        .card-detail__specifications-item-empty
+                                        .card-detail__specifications-item-text 50 г
+                                    .card-detail__specifications-item
+                                        .card-detail__specifications-item-title Кинза
+                                        .card-detail__specifications-item-empty
+                                        .card-detail__specifications-item-text 100 г
+                                    //- .card-detail__switch-content-main-title
+                                    //-   .card-detail__switch-content-main-caption Условия хранения
+                                    //-   p.card-detail__switch-content-main-description При температуре от 0°C до +4°C
+                                    //- .card-detail__switch-content-main-title
+                                    //-   .card-detail__switch-content-main-caption Состав
+                                    //-   p.card-detail__switch-content-main-description молоко нормализованное пастеризованное
+                        .card-detail__switch-content
+                            .card-detail__description
+                                .page-title
+                                    h2 Пошаговый рецепт приготовления
+                                .card-detail__switch-content-main
+                                    .card-detail__switch-content-main-info
+                                    ul.card-detail__switch-content-list
+                                        li.card-detail__switch-content-item
+                                            .card-detail__switch-content-item-title Шаг 1
+                                            .card-detail__switch-content-item-text Молоко Простоквашино - вкусный, натуральный и полезный продукт для здорового питания. В агрокомплексе мы любим МОЛОКО! Поэтому считаем, что оно должно быть только ПЯТИЗВЁЗДОЧНОГО КАЧЕСТВА и никак иначе. И мы делаем всё, чтобы такое вкусное и качественное молоко было у вас. 1. 
+                                        li.card-detail__switch-content-item
+                                            .card-detail__switch-content-item-title Шаг 2
+                                            .card-detail__switch-content-item-text Молоко Простоквашино - вкусный, натуральный и полезный продукт для здорового питания. В агрокомплексе мы любим МОЛОКО! Поэтому считаем, что оно должно быть только ПЯТИЗВЁЗДОЧНОГО КАЧЕСТВА и никак иначе. И мы делаем всё, чтобы такое вкусное и качественное молоко было у вас. 1. 
+                                        li.card-detail__switch-content-item
+                                            .card-detail__switch-content-item-title Шаг 3
+                                            .card-detail__switch-content-item-text Молоко Простоквашино - вкусный, натуральный и полезный продукт для здорового питания. В агрокомплексе мы любим МОЛОКО! Поэтому считаем, что оно должно быть только ПЯТИЗВЁЗДОЧНОГО КАЧЕСТВА и никак иначе. И мы делаем всё, чтобы такое вкусное и качественное молоко было у вас. 1. 
+        +interestingProduct                                
+        .cards-swiper.recipec-detail__swiper
+            .container
+                .h2.cards-swiper__head Другие рецепты
+                .cards-swiper__container
+                    button(type="button").js-cards-swiper-next.array-slider.array-slider--white.array-slider--next
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                    button(type="button").js-cards-swiper-prev.array-slider.array-slider--white.array-slider--prev
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#arrowSlider")
+                    .js-cards-swiper.swiper
+                        .swiper-wrapper
+                            .swiper-slide.card-content
+                                .card-content__img 
+                                    img(src="/assets/images/news.png" alt="News")
+                                .card-content__info
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#timer") 
+                                        | 40 минут
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#food") 
+                                        | 3-4 порции
+                                .card-content__description Тыквенный суп со сливками, томленным цыплёнком и свежей зеленью соусом
+                            .swiper-slide.card-content
+                                .card-content__img 
+                                    img(src="/assets/images/news.png" alt="News")
+                                .card-content__info
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#timer") 
+                                        | 40 минут
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#food") 
+                                        | 3-4 порции
+                                .card-content__description Тыквенный суп со сливками, томленным цыплёнком и свежей зеленью соусом
+                            .swiper-slide.card-content
+                                .card-content__img 
+                                    img(src="/assets/images/news.png" alt="News")
+                                .card-content__info
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#timer") 
+                                        | 40 минут
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#food") 
+                                        | 3-4 порции
+                                .card-content__description Тыквенный суп со сливками, томленным цыплёнком и свежей зеленью соусом
+                            .swiper-slide.card-content
+                                .card-content__img 
+                                    img(src="/assets/images/news.png" alt="News")
+                                .card-content__info
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#timer") 
+                                        | 40 минут
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#food") 
+                                        | 3-4 порции
+                                .card-content__description Тыквенный суп со сливками, томленным цыплёнком и свежей зеленью соусом
+                            .swiper-slide.card-content
+                                .card-content__img 
+                                    img(src="/assets/images/news.png" alt="News")
+                                .card-content__info
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#timer") 
+                                        | 40 минут
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#food") 
+                                        | 3-4 порции
+                                .card-content__description Тыквенный суп со сливками, томленным цыплёнком и свежей зеленью соусом
+                            .swiper-slide.card-content
+                                .card-content__img 
+                                    img(src="/assets/images/news.png" alt="News")
+                                .card-content__info
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#timer") 
+                                        | 40 минут
+                                    .card-content__text 
+                                        svg
+                                            use(xlink:href="/assets/icons/sprite.svg#food") 
+                                        | 3-4 порции
+                                .card-content__description Тыквенный суп со сливками, томленным цыплёнком и свежей зеленью соусом
+        +footer

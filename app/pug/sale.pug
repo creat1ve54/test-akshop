@@ -1,0 +1,62 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug
+include layouts/components/footer.pug
+include layouts/components/filter.pug
+
+
+doctype html 
+html(lang='ru')
+    +m-head
+    body
+        +header
+        .container
+            .breadcrumb
+                .breadcrumb__list
+                    a(href="##").breadcrumb__item Главная
+                    .breadcrumb__item Акции
+                .breadcrumb__title
+                    a(href="##").breadcrumb__back
+            .page-title
+                a(href="##").page-title__back
+                    svg
+                        use(xlink:href="/assets/icons/sprite.svg#arrowRight")
+                h2 Акции
+                //- .page-title__count 233 #[span товара]
+        .container
+            .sale
+                .sale-card
+                    .sale-card__time
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#clock")
+                        span 18 д : 18 ч : 18 м
+                    a(href="##").sale-card__container
+                        img(src="/assets/images/sale.png", alt="Sal")
+                .sale-card
+                    .sale-card__time
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#clock")
+                        span 18 д : 18 ч : 18 м
+                    a(href="##").sale-card__container
+                        img(src="/assets/images/sale.png", alt="Sal")
+                .sale-card
+                    .sale-card__time
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#clock")
+                        span 18 д : 18 ч : 18 м
+                    a(href="##").sale-card__container
+                        img(src="/assets/images/sale.png", alt="Sal")
+                .sale-card
+                    .sale-card__time
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#clock")
+                        span 18 д : 18 ч : 18 м
+                    a(href="##").sale-card__container
+                        img(src="/assets/images/sale.png", alt="Sal")
+                .sale-card
+                    .sale-card__time
+                        svg
+                            use(xlink:href="/assets/icons/sprite.svg#clock")
+                        span 18 д : 18 ч : 18 м
+                    a(href="##").sale-card__container
+                        img(src="/assets/images/sale.png", alt="Sal")
+        +footer
